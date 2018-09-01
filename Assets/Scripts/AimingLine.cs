@@ -12,7 +12,7 @@ public class AimingLine : MonoBehaviour
     #region Variable Declarations
     // Serialized Fields
     [SerializeField] float lifeTime = 3f;
-    [SerializeField] LeanTweenType tweenType;
+    [SerializeField] AnimationCurve curve;
 
     // Private
     float timer;
@@ -34,7 +34,7 @@ public class AimingLine : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
         mat = lineRenderer.material;
         float alphaStart = lineRenderer.startColor.a;
-        LeanTween.value(gameObject, UpdateAlpha, alphaStart, 0f, lifeTime).setEase(tweenType).setOnComplete(()=> {
+        LeanTween.value(gameObject, UpdateAlpha, alphaStart, 0f, lifeTime).setEase(curve).setOnComplete(()=> {
             Destroy(lineRenderer.gameObject);
         });
 	}
