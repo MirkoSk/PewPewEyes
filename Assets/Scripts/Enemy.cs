@@ -5,6 +5,8 @@ using UnityEngine;
 /// <summary>
 /// 
 /// </summary>
+
+[RequireComponent(typeof(Rigidbody))]
 public class Enemy : MonoBehaviour 
 {
 	
@@ -14,8 +16,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] float shootInterval = 1f;
     [SerializeField] float offset;
     [SerializeField] float laserSpeed = 10f;
+    [SerializeField] EnemyType enemyType;
 
     // Private
+    int currentHP;
     float timer;
     bool wait = true;
 	#endregion
@@ -31,7 +35,7 @@ public class Enemy : MonoBehaviour
 	#region Unity Event Functions
 	private void Start () 
 	{
-        
+        currentHP = enemyType.hp;
 	}
 
     private void Update()
@@ -60,6 +64,21 @@ public class Enemy : MonoBehaviour
     {
         GameObject laser = GameObject.Instantiate(LaserBeamPrefab, transform.position + transform.forward + Vector3.up * 0.5f, Quaternion.identity);
         laser.GetComponent<Rigidbody>().velocity = transform.forward * laserSpeed;
+        laser.GetComponent<Laser>().Owner = this;
+    }
+
+    public void DealDamage(int amount)
+    {
+        currentHP -= amount;
+        CheckDeath();
+    }
+
+    private void CheckDeath()
+    {
+        if(currentHP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     #endregion
 
