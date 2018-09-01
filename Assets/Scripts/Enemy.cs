@@ -18,11 +18,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] float offset;
     [SerializeField] float laserSpeed = 10f;
     [SerializeField] EnemyType enemyType;
+    [SerializeField] EnemyDeath death;
 
     // Private
     int currentHP;
     float timer;
     bool wait = true;
+    bool logicBlocked;
     NavMeshAgent agent;
 	#endregion
 	
@@ -44,29 +46,32 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (agent.isOnNavMesh && Vector3.Distance(transform.position, GameManager.Instance.Player.transform.position) >= 10f)
+        if (!logicBlocked)
         {
-            agent.SetDestination(GameManager.Instance.Player.transform.position);
-        }
-        else if (agent.isOnNavMesh)
-        {
-            agent.SetDestination(transform.position);
-        }
+            if (agent.isOnNavMesh && Vector3.Distance(transform.position, GameManager.Instance.Player.transform.position) >= 10f)
+            {
+                agent.SetDestination(GameManager.Instance.Player.transform.position);
+            }
+            else if (agent.isOnNavMesh)
+            {
+                agent.SetDestination(transform.position);
+            }
+            if (GameManager.Instance != null)
+                transform.LookAt(GameManager.Instance.Player.transform);
 
-        transform.LookAt(GameManager.Instance.Player.transform);
+            if (!wait && timer >= shootInterval)
+            {
+                ShootLaser();
+                timer = 0f;
+            }
+            else if (wait && timer >= offset)
+            {
+                wait = false;
+                timer = 0f;
+            }
 
-        if (!wait && timer >= shootInterval)
-        {
-            ShootLaser();
-            timer = 0f;
+            timer += Time.deltaTime;
         }
-        else if (wait && timer >= offset)
-        {
-            wait = false;
-            timer = 0f;
-        }
-
-        timer += Time.deltaTime;
     }
     #endregion
 
@@ -85,25 +90,29 @@ public class Enemy : MonoBehaviour
         currentHP -= amount;
         CheckDeath();
     }
-
-    private void CheckDeath()
-    {
-        if(currentHP <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
     #endregion
 
 
 
     #region Private Functions
-
+    private void CheckDeath()
+    {
+        if (currentHP <= 0)
+        {
+            death.ani.SetBool("death", true);
+            logicBlocked = true;
+            Invoke("KillObj", 2.5f);
+        }
+    }
+    private void KillObj()
+    {
+        Destroy(gameObject);
+    }
     #endregion
 
 
 
     #region Coroutines
-
+    
     #endregion
 }

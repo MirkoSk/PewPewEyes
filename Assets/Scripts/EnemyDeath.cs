@@ -10,7 +10,7 @@ public class EnemyDeath : MonoBehaviour
 
     #region Variable Declarations
     // Serialized Fields
-    [SerializeField] Animator ani;
+    public Animator ani;
     [SerializeField] List<Transform> shells;
     [SerializeField] float initialVelocity;
     // Private
@@ -26,13 +26,13 @@ public class EnemyDeath : MonoBehaviour
 
 
     #region Unity Event Functions
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ani.SetBool("death", true);
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        ani.SetBool("death", true);
+    //    }
+    //}
     #endregion
 
 
@@ -44,11 +44,11 @@ public class EnemyDeath : MonoBehaviour
         ani.enabled = false;
         shells.ForEach((Transform t) =>
         {
-            t.SetParent(null, true);
+            //t.SetParent(null, true);
             Rigidbody rb = t.gameObject.AddComponent<Rigidbody>();
-            MeshCollider meshC = t.gameObject.AddComponent<MeshCollider>();
-            rb.drag = 5f;
-            meshC.convex = true;
+            t.gameObject.GetComponent<MeshCollider>().enabled = true;
+            rb.drag = 0f;
+            rb.mass = 5f;
             rb.velocity = transform.position + t.position * initialVelocity;
         });
     }
