@@ -12,7 +12,6 @@ public class AimAssist : MonoBehaviour
     // Serialized Fields
     [Space]
     [SerializeField] float lineLength = 10f;
-    [SerializeField] float lineDuration = 1f;
 
     [Header("References")]
     [SerializeField] LayerMask shieldLayer;
@@ -60,7 +59,7 @@ public class AimAssist : MonoBehaviour
     {
         Ray ray = new Ray(laser.position, laser.GetComponent<Rigidbody>().velocity.normalized);
         RaycastHit hitInfo;
-        Physics.Raycast(ray, out hitInfo, 20f, layerMask);
+        Physics.Raycast(ray, out hitInfo, 20f, shieldLayer);
 
         if (hitInfo.point != Vector3.zero) Debug.DrawLine(ray.origin, hitInfo.point, Color.green, lineLength);
         else Debug.DrawRay(ray.origin, ray.direction, Color.red, 3f);
