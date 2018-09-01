@@ -9,14 +9,14 @@ public class GameManager : MonoBehaviour
 {
 
     #region Variable Declarations
-    [HideInInspector] public static GameManager Instance;
+    public static GameManager Instance;
 
     // Serialized Fields
 
     // Private
 
     // Public
-    public GameObject player;
+    [HideInInspector] public GameObject player;
 	#endregion
 	
 	
