@@ -26,7 +26,7 @@ public class Healthbar : MonoBehaviour {
 
 
     #region Public Functions
-    void TakeDamage(int hp, int maxHP) {
+    public void TakeDamage(int hp, int maxHP) {
         // Set new color of the healthbar
         healthbarForeground.GetComponent<UnityEngine.UI.Image>().color = hpColor.Evaluate((float)hp / maxHP);
 

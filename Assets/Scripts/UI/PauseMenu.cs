@@ -15,6 +15,8 @@ namespace NGlow
         GameObject resumeButton;
         EventSystem eventSystem;
         bool gameIsPaused;
+        UnityStandardAssets.Characters.FirstPerson.FirstPersonController fpsController;
+
         public bool GameIsPaused { get { return gameIsPaused; } }
 
         // Use this for initialization
@@ -25,6 +27,7 @@ namespace NGlow
             resumeButton = mainMenu.transform.Find("ResumeButton").gameObject;
             optionsMenu = pauseMenu.transform.Find("OptionsMenu").gameObject;
             eventSystem = GameObject.FindObjectOfType<EventSystem>();
+            fpsController = GameManager.Instance.Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
         }
 
         private void Update()
@@ -49,7 +52,10 @@ namespace NGlow
 
         public void PauseGame()
         {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
             Time.timeScale = 0;
+            fpsController.enabled = false;
             pauseMenu.SetActive(true);
             mainMenu.SetActive(true);
             eventSystem.SetSelectedGameObject(resumeButton);
@@ -58,7 +64,10 @@ namespace NGlow
 
         public void ResumeGame()
         {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             Time.timeScale = 1f;
+            fpsController.enabled = true;
             pauseMenu.SetActive(false);
             optionsMenu.SetActive(false);
             mainMenu.SetActive(true);
