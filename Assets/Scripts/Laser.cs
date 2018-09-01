@@ -85,11 +85,12 @@ public class Laser : MonoBehaviour
             {
                 aimingLine = GameObject.Instantiate(aimingLinePrefab, hitInfo.point, Quaternion.identity, transform).GetComponent<LineRenderer>();
                 aimingLine.GetComponent<AimingLine>().LifeTime = lineDuration;
-                aimingLine.positionCount = 2;
+                aimingLine.positionCount = 3;
             }
 
-            aimingLine.SetPosition(0, hitInfo.point);
-            aimingLine.SetPosition(1, hitInfo.point + reflection * lineLength);
+            aimingLine.SetPosition(0, transform.position);
+            aimingLine.SetPosition(1, hitInfo.point);
+            aimingLine.SetPosition(2, hitInfo.point + reflection * lineLength);
         }
         else if (hitInfo.point == Vector3.zero && aimingLine != null)
         {
