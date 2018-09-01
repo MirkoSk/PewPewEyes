@@ -15,7 +15,7 @@ public class AimAssist : MonoBehaviour
     [SerializeField] float lineDuration = 1f;
 
     [Header("References")]
-    [SerializeField] LayerMask layerMask;
+    [SerializeField] LayerMask shieldLayer;
     [SerializeField] GameObject aimingLinePrefab;
 
     // Private
