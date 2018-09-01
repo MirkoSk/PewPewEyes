@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 33684361253231084}
   - component: {fileID: 23117101373577514}
   - component: {fileID: 65511582914510730}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FullShieldInvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
