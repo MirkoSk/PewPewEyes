@@ -1,0 +1,141 @@
+fileFormatVersion: 2
+guid: 7e603d31b3d4db84aa12ca23441da7d9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BasicEnemy_Armor_ColliderMesh1
+    100002: BasicEnemy_Armor_ColliderMesh2
+    100004: BasicEnemy_Armor_ColliderMesh3
+    100006: BasicEnemy_Armor_ColliderMesh4
+    100008: BasicEnemy_Eyering_MeshCollider
+    100010: BasicEnemy_Eyering_MeshCollider1
+    100012: BasicEnemy_Shell1_ColliderMesh1
+    100014: BasicEnemy_Shell2_ColliderMesh2
+    100016: BasicEnemy_Shell3_ColliderMesh3
+    100018: BasicEnemy_Shell4_ColliderMesh4
+    100020: //RootNode
+    400000: BasicEnemy_Armor_ColliderMesh1
+    400002: BasicEnemy_Armor_ColliderMesh2
+    400004: BasicEnemy_Armor_ColliderMesh3
+    400006: BasicEnemy_Armor_ColliderMesh4
+    400008: BasicEnemy_Eyering_MeshCollider
+    400010: BasicEnemy_Eyering_MeshCollider1
+    400012: BasicEnemy_Shell1_ColliderMesh1
+    400014: BasicEnemy_Shell2_ColliderMesh2
+    400016: BasicEnemy_Shell3_ColliderMesh3
+    400018: BasicEnemy_Shell4_ColliderMesh4
+    400020: //RootNode
+    2100000: lambert1
+    2300000: BasicEnemy_Armor_ColliderMesh1
+    2300002: BasicEnemy_Armor_ColliderMesh2
+    2300004: BasicEnemy_Armor_ColliderMesh3
+    2300006: BasicEnemy_Armor_ColliderMesh4
+    2300008: BasicEnemy_Eyering_MeshCollider
+    2300010: BasicEnemy_Eyering_MeshCollider1
+    2300012: BasicEnemy_Shell1_ColliderMesh1
+    2300014: BasicEnemy_Shell2_ColliderMesh2
+    2300016: BasicEnemy_Shell3_ColliderMesh3
+    2300018: BasicEnemy_Shell4_ColliderMesh4
+    3300000: BasicEnemy_Armor_ColliderMesh1
+    3300002: BasicEnemy_Armor_ColliderMesh2
+    3300004: BasicEnemy_Armor_ColliderMesh3
+    3300006: BasicEnemy_Armor_ColliderMesh4
+    3300008: BasicEnemy_Eyering_MeshCollider
+    3300010: BasicEnemy_Eyering_MeshCollider1
+    3300012: BasicEnemy_Shell1_ColliderMesh1
+    3300014: BasicEnemy_Shell2_ColliderMesh2
+    3300016: BasicEnemy_Shell3_ColliderMesh3
+    3300018: BasicEnemy_Shell4_ColliderMesh4
+    4300000: BasicEnemy_Shell1_ColliderMesh1
+    4300002: BasicEnemy_Armor_ColliderMesh1
+    4300004: BasicEnemy_Shell4_ColliderMesh4
+    4300006: BasicEnemy_Shell3_ColliderMesh3
+    4300008: BasicEnemy_Shell2_ColliderMesh2
+    4300010: BasicEnemy_Armor_ColliderMesh4
+    4300012: BasicEnemy_Armor_ColliderMesh3
+    4300014: BasicEnemy_Armor_ColliderMesh2
+    4300016: BasicEnemy_Eyering_MeshCollider
+    4300018: BasicEnemy_Eyering_MeshCollider1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

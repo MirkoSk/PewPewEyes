@@ -26,6 +26,7 @@ public class Constants
     public static readonly string TAG_PLAYER = "Player";
     public static readonly string TAG_LASER = "Laser";
     public static readonly string TAG_ENEMY = "Enemy";
+    public static readonly string TAG_SHIELD = "Shield";
     #endregion
 
     #region Scenes
