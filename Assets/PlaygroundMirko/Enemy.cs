@@ -12,10 +12,12 @@ public class Enemy : MonoBehaviour
 	// Serialized Fields
 	[SerializeField] GameObject LaserBeamPrefab;
     [SerializeField] float shootInterval = 1f;
+    [SerializeField] float offset;
     [SerializeField] float laserSpeed = 10f;
 
     // Private
     float timer;
+    bool wait = true;
 	#endregion
 	
 	
@@ -36,9 +38,14 @@ public class Enemy : MonoBehaviour
     {
         transform.LookAt(GameManager.Instance.player.transform);
 
-        if (timer >= shootInterval)
+        if (!wait && timer >= shootInterval)
         {
             ShootLaser();
+            timer = 0f;
+        }
+        else if (wait && timer >= offset)
+        {
+            wait = false;
             timer = 0f;
         }
 

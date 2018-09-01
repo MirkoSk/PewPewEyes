@@ -56,8 +56,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4090481029631544}
   - component: {fileID: 143158787643602750}
+  - component: {fileID: 54717845623803196}
   - component: {fileID: 114504792493382702}
-  - component: {fileID: 54933513984249552}
   - component: {fileID: 82115701963512178}
   m_Layer: 0
   m_Name: FPSController
@@ -106,8 +106,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1448213049165898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.653, z: 0.603}
-  m_LocalScale: {x: 1.3692008, y: 2.101046, z: 0.12331}
+  m_LocalPosition: {x: 0, y: -0.653, z: 0.867}
+  m_LocalScale: {x: 1.5274805, y: 2.101046, z: 0.23913507}
   m_Children: []
   m_Father: {fileID: 4603449184759180}
   m_RootOrder: 1
@@ -264,7 +264,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1570155249763678}
   m_Mesh: {fileID: 4300002, guid: 457d9a08991403d42a8b3e51ffff898d, type: 3}
---- !u!54 &54933513984249552
+--- !u!54 &54717845623803196
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -276,9 +276,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!64 &64147787020864680
 MeshCollider:
   m_ObjectHideFlags: 1
