@@ -119,6 +119,7 @@ public static class ExtensionMethods
     /// Returns the fist component of type T found.
     /// Useful for OnTrigger methods. Since they don't understand compound colliders, you can get the parent object by looking for a Rigidbody.
     /// </summary>
+    /// <returns>The first component of type T found. Null if none is found.</returns>
     public static T FindComponentInParents<T>(this Collider hit) where T : Component
     {
         Transform transform = hit.transform;
@@ -126,9 +127,7 @@ public static class ExtensionMethods
         {
             if (transform.parent == null)
             {
-                Debug.LogError("Expected to find component of type "
-               + typeof(T) + " in parents of " + hit.name + ", but found none.");
-                break;
+                return null;
             }
 
             transform = transform.parent;

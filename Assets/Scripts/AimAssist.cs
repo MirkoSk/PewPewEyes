@@ -5,21 +5,27 @@ using UnityEngine;
 /// <summary>
 /// 
 /// </summary>
-public class AimAssist : MonoBehaviour 
+public class AimAssist : MonoBehaviour
 {
 
     #region Variable Declarations
     // Serialized Fields
+    [Space]
+    [SerializeField] float lineLength = 10f;
+    [SerializeField] float lineDuration = 1f;
+
+    [Header("References")]
     [SerializeField] LayerMask layerMask;
+    [SerializeField] GameObject aimingLinePrefab;
+
+    // Private
+
+    #endregion
+
+
+
+    #region Public Properties
     
-	// Private
-	
-	#endregion
-	
-	
-	
-	#region Public Properties
-	
 	#endregion
 	
 	
@@ -32,7 +38,7 @@ public class AimAssist : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Rigidbody rb = other.FindComponentInParents<Rigidbody>();
+        Rigidbody rb = other.GetComponentInParent<Rigidbody>();
 
         if (rb != null && rb.CompareTag(Constants.TAG_LASER))
         {
@@ -56,7 +62,15 @@ public class AimAssist : MonoBehaviour
         RaycastHit hitInfo;
         Physics.Raycast(ray, out hitInfo, 20f, layerMask);
 
-        //Debug.Log(hitInfo);
+        if (hitInfo.point != Vector3.zero) Debug.DrawLine(ray.origin, hitInfo.point, Color.green, lineLength);
+        else Debug.DrawRay(ray.origin, ray.direction, Color.red, 3f);
+
+        Vector3 reflection = Vector3.Reflect(ray.direction, hitInfo.normal);
+
+        LineRenderer aimingLine = GameObject.Instantiate(aimingLinePrefab, hitInfo.point, Quaternion.identity, transform).GetComponent<LineRenderer>();
+        aimingLine.positionCount = 2;
+        aimingLine.SetPosition(0, hitInfo.point);
+        aimingLine.SetPosition(1, hitInfo.point + reflection * lineLength);
     }
     #endregion
 
