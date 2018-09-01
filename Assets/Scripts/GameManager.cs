@@ -5,11 +5,11 @@ using UnityEngine;
 /// <summary>
 /// 
 /// </summary>
-public class GameManager : MonoBehaviour 
+public class GameManager : MonoBehaviour
 {
 
     #region Variable Declarations
-    public static GameManager Instance;
+    [HideInInspector] public static GameManager Instance;
 
     // Serialized Fields
 

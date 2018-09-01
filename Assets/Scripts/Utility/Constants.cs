@@ -15,7 +15,6 @@ public class Constants
     public static readonly string INPUT_MOUSE_Y = "Mouse Y";
     public static readonly string INPUT_JUMP = "Jump";
     public static readonly string INPUT_CRAWL = "Crawl";
-    public static readonly string INPUT_SWITCH_VIEW = "SwitchView";
     public static readonly string INPUT_SUBMIT = "Submit";
     public static readonly string INPUT_CANCEL = "Cancel";
     public static readonly string INPUT_ESCAPE = "Escape";
@@ -24,10 +23,7 @@ public class Constants
 
     #region Tags and Layers
     public static readonly string TAG_PLAYER = "Player";
-    public static readonly string TAG_PICKUP = "Pickup";
-    public static readonly string TAG_LAZOR_EMITTER = "LazorEmitter";
-    public static readonly string TAG_MUSHROOM = "Mushroom";
-    public static readonly int LAYER_LAZOR_RECEIVER = 9;
+    public static readonly string TAG_LASER = "Player";
     #endregion
 
     #region Scenes
