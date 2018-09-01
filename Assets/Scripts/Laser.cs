@@ -50,7 +50,7 @@ public class Laser : MonoBehaviour
         }
         if(currentReflections > type.maxReflections)
         {
-            Destroy(gameObject)
+            Destroy(gameObject);
         }
     }
     #endregion

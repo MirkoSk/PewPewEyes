@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4053767023504356}
   - component: {fileID: 114748631177709278}
+  - component: {fileID: 135047568815375264}
   m_Layer: 0
   m_Name: AimAssist
   m_TagString: Untagged
@@ -629,8 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineLength: 10
-  lineDuration: 1
-  layerMask:
+  shieldLayer:
     serializedVersion: 2
     m_Bits: 512
   aimingLinePrefab: {fileID: 1959629036657846, guid: f070e89a2daa5f14993c8e1b23f8af13,
@@ -642,6 +642,18 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1938948776533296}
   m_Enabled: 1
+--- !u!135 &135047568815375264
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062339062950150}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &143158787643602750
 CharacterController:
   m_ObjectHideFlags: 1
