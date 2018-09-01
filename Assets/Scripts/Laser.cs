@@ -6,6 +6,7 @@ using UnityEngine;
 /// 
 /// </summary>
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(TrailRenderer))]
 public class Laser : MonoBehaviour 
 {
 
@@ -17,13 +18,17 @@ public class Laser : MonoBehaviour
     [Header("References")]
     [SerializeField] LayerMask shieldLayer;
     [SerializeField] GameObject aimingLinePrefab;
+    [SerializeField] Gradient shotGoodGradient;
+
 
     // Private
+    bool isGood;
     int currentReflections = 0;
     Rigidbody rb;
     LineRenderer aimingLine;
+    TrailRenderer trail;
 
-    public Enemy Owner { get; set;}
+    public Enemy Owner { get; set; }
     #endregion
 
 
@@ -35,16 +40,17 @@ public class Laser : MonoBehaviour
 
 
     #region Unity Event Functions
-    private void Start () 
-	{
+    private void Start()
+    {
+        trail = GetComponent<TrailRenderer>();
         rb = GetComponent<Rigidbody>();
-	}
+    }
 
 
     private void OnCollisionEnter(Collision collision)
     {
         currentReflections += 1;
-        if (collision.collider.CompareTag(Constants.TAG_ENEMY))
+        if (collision.collider.CompareTag(Constants.TAG_ENEMY) && isGood)
         {
             Enemy enemy = collision.collider.attachedRigidbody.GetComponent<Enemy>();
             if (enemy == Owner)
@@ -56,7 +62,12 @@ public class Laser : MonoBehaviour
                 enemy.DealDamage(type.damage);
             }
         }
-        if(currentReflections > type.maxReflections)
+        else if (collision.collider.CompareTag(Constants.TAG_SHIELD))
+        {
+            trail.colorGradient = shotGoodGradient;
+            isGood = true;
+        }
+        if (currentReflections > type.maxReflections)
         {
             Destroy(gameObject);
         }
@@ -68,6 +79,8 @@ public class Laser : MonoBehaviour
     #region Public Functions
     public void UpdateAimAssist(float lineLength, float lineDuration)
     {
+        if (!GameManager.Instance.ShieldController.ShieldUp) return;
+
         Ray ray = new Ray(transform.position, rb.velocity.normalized);
         RaycastHit hitInfo;
         Physics.Raycast(ray, out hitInfo, 20f, shieldLayer);

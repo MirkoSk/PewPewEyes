@@ -185,7 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6111c8601bbc83a45815320db4acba04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  Player: {fileID: 0}
+  ShieldController: {fileID: 0}
 --- !u!4 &992235461
 Transform:
   m_ObjectHideFlags: 0
@@ -394,7 +395,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1570155249763678, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114748631177709278, guid: b10a11f3579aeb54c98e4bb9c8ba29b1,
         type: 2}
@@ -443,6 +444,18 @@ Prefab:
     - target: {fileID: 4582360171137828, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570155249763678, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
+      propertyPath: m_TagString
+      value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285053872429936, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
+      propertyPath: m_TagString
+      value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448213049165898, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
+      propertyPath: m_TagString
+      value: Shield
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 135047568815375264, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
