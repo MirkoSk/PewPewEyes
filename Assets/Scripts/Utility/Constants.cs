@@ -23,7 +23,8 @@ public class Constants
 
     #region Tags and Layers
     public static readonly string TAG_PLAYER = "Player";
-    public static readonly string TAG_LASER = "Player";
+    public static readonly string TAG_LASER = "Laser";
+    public static readonly string TAG_ENEMY = "Enemy";
     #endregion
 
     #region Scenes
