@@ -24,7 +24,7 @@ namespace NGlow
             mainMenu = pauseMenu.transform.Find("MainMenu").gameObject;
             resumeButton = mainMenu.transform.Find("ResumeButton").gameObject;
             optionsMenu = pauseMenu.transform.Find("OptionsMenu").gameObject;
-            eventSystem = transform.parent.parent.Find("EventSystem").GetComponent<EventSystem>();
+            eventSystem = GameObject.FindObjectOfType<EventSystem>();
         }
 
         private void Update()
@@ -50,7 +50,6 @@ namespace NGlow
         public void PauseGame()
         {
             Time.timeScale = 0;
-            //Rumble.Instance.StopAllRumble();
             pauseMenu.SetActive(true);
             mainMenu.SetActive(true);
             eventSystem.SetSelectedGameObject(resumeButton);
@@ -69,12 +68,17 @@ namespace NGlow
 
         public void ReturnToMainMenu()
         {
-            // Insert Code here
+            // Put the code to execute from UI here
         }
 
         public void ExitGame()
         {
-            // Insert Code here
+            Debug.Log("Exiting the game");
+            Application.Quit();
+
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
         }
     }
 }
