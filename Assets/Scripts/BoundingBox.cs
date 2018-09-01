@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// 
 /// </summary>
-public class BountingBox : MonoBehaviour 
+public class BoundingBox : MonoBehaviour 
 {
 
     #region Variable Declarations

@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
     // Private
 
     // Public
-    [HideInInspector] public GameObject player;
+    [HideInInspector] public GameObject Player;
+    [HideInInspector] public ShieldController ShieldController;
 	#endregion
 	
 	
@@ -47,7 +48,8 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        player = GameObject.FindGameObjectWithTag(Constants.TAG_PLAYER);
+        Player = GameObject.FindGameObjectWithTag(Constants.TAG_PLAYER);
+        ShieldController = GameObject.FindObjectOfType<ShieldController>();
 	}
 	#endregion
 	
