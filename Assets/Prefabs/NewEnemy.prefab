@@ -1068,7 +1068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaserBeamPrefab: {fileID: 1468579894311436, guid: 998cd82d41ad1c2439b25b35624419f4,
     type: 2}
-  shootInterval: 5
+  shootInterval: 2
   offset: 0
   laserSpeed: 10
   enemyType: {fileID: 11400000, guid: 0fac61c3c10077d4493aec7399933cbc, type: 2}

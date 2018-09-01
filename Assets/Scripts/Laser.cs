@@ -68,6 +68,8 @@ public class Laser : MonoBehaviour
     #region Public Functions
     public void UpdateAimAssist(float lineLength, float lineDuration)
     {
+        if (!GameManager.Instance.ShieldController.ShieldUp) return;
+
         Ray ray = new Ray(transform.position, rb.velocity.normalized);
         RaycastHit hitInfo;
         Physics.Raycast(ray, out hitInfo, 20f, shieldLayer);

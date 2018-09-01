@@ -44,16 +44,16 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, GameManager.Instance.player.transform.position) >= 7f)
+        if (Vector3.Distance(transform.position, GameManager.Instance.Player.transform.position) >= 7f)
         {
-            agent.SetDestination(GameManager.Instance.player.transform.position);
+            agent.SetDestination(GameManager.Instance.Player.transform.position);
         }
         else
         {
             agent.SetDestination(transform.position);
         }
 
-        transform.LookAt(GameManager.Instance.player.transform);
+        transform.LookAt(GameManager.Instance.Player.transform);
 
         if (!wait && timer >= shootInterval)
         {

@@ -11,6 +11,7 @@ public class Constants
     public static readonly string INPUT_HORIZONTAL = "Horizontal";
     public static readonly string INPUT_VERTICAL = "Vertical";
     public static readonly string INPUT_INTERACT = "Interact";
+    public static readonly string INPUT_SHIELD = "Fire1";
     public static readonly string INPUT_MOUSE_X = "Mouse X";
     public static readonly string INPUT_MOUSE_Y = "Mouse Y";
     public static readonly string INPUT_JUMP = "Jump";

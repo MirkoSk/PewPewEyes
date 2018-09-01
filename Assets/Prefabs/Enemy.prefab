@@ -203,7 +203,7 @@ MonoBehaviour:
     type: 2}
   shootInterval: 5
   offset: 0
-  laserSpeed: 10
+  laserSpeed: 15
   enemyType: {fileID: 11400000, guid: 0fac61c3c10077d4493aec7399933cbc, type: 2}
 --- !u!136 &136158427279865886
 CapsuleCollider:
