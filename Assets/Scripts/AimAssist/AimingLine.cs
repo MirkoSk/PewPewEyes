@@ -18,7 +18,6 @@ public class AimingLine : MonoBehaviour
     float timer;
     LineRenderer lineRenderer;
     Material mat;
-    Rigidbody rb;
     float lifeTime;
     #endregion
 
@@ -34,7 +33,6 @@ public class AimingLine : MonoBehaviour
     private void Start () 
 	{
         lineRenderer = GetComponent<LineRenderer>();
-        rb = GetComponent<Rigidbody>();
 
         mat = lineRenderer.material;
         float alphaStart = lineRenderer.startColor.a;

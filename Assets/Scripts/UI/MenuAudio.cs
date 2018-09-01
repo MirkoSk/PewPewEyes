@@ -5,7 +5,6 @@ using UnityEngine;
 /// <summary>
 /// 
 /// </summary>
-[RequireComponent(typeof(AudioSource))]
 public class MenuAudio : MonoBehaviour {
 
     #region Variable Declarations
@@ -28,9 +27,9 @@ public class MenuAudio : MonoBehaviour {
 
 
     #region Public Functions
-    public void PlayMenuConfirm()
+    public void PlayConfirm()
     {
         audioSource.PlayOneShot(menuConfirmSound, menuConfirmVolume);
     }
-    #endregion
+	#endregion
 }

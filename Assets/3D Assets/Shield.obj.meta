@@ -16,7 +16,12 @@ ModelImporter:
     3300002: Shield
     4300000: Cylinder
     4300002: Shield
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DefaultHDMaterial
+    second: {fileID: 2100000, guid: b80f69e29634bbb4d807897d643af122, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
