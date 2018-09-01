@@ -12,10 +12,7 @@ public class AimAssist : MonoBehaviour
     // Serialized Fields
     [Space]
     [SerializeField] float lineLength = 10f;
-
-    [Header("References")]
-    [SerializeField] LayerMask shieldLayer;
-    [SerializeField] GameObject aimingLinePrefab;
+    [SerializeField] float lineDuration = 2f;
 
     // Private
 
@@ -35,13 +32,13 @@ public class AimAssist : MonoBehaviour
 		
 	}
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         Rigidbody rb = other.GetComponentInParent<Rigidbody>();
 
         if (rb != null && rb.CompareTag(Constants.TAG_LASER))
         {
-            CreateAimAssist(rb.transform);
+            rb.GetComponent<Laser>().UpdateAimAssist(lineLength, lineDuration);
         }
     }
     #endregion
@@ -55,22 +52,7 @@ public class AimAssist : MonoBehaviour
 
 
     #region Private Functions
-    void CreateAimAssist(Transform laser)
-    {
-        Ray ray = new Ray(laser.position, laser.GetComponent<Rigidbody>().velocity.normalized);
-        RaycastHit hitInfo;
-        Physics.Raycast(ray, out hitInfo, 20f, shieldLayer);
-
-        if (hitInfo.point != Vector3.zero) Debug.DrawLine(ray.origin, hitInfo.point, Color.green, lineLength);
-        else Debug.DrawRay(ray.origin, ray.direction, Color.red, 3f);
-
-        Vector3 reflection = Vector3.Reflect(ray.direction, hitInfo.normal);
-
-        LineRenderer aimingLine = GameObject.Instantiate(aimingLinePrefab, hitInfo.point, Quaternion.identity, transform).GetComponent<LineRenderer>();
-        aimingLine.positionCount = 2;
-        aimingLine.SetPosition(0, hitInfo.point);
-        aimingLine.SetPosition(1, hitInfo.point + reflection * lineLength);
-    }
+    
     #endregion
 
 

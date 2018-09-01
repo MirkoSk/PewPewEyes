@@ -5,15 +5,23 @@ using UnityEngine;
 /// <summary>
 /// 
 /// </summary>
+[RequireComponent(typeof(Rigidbody))]
 public class Laser : MonoBehaviour 
 {
 
     #region Variable Declarations
 
     // Serialized Fields
-    public LaserType type;
+    [SerializeField] LaserType type;
+
+    [Header("References")]
+    [SerializeField] LayerMask shieldLayer;
+    [SerializeField] GameObject aimingLinePrefab;
+
     // Private
-    private int currentReflections = 0;
+    int currentReflections = 0;
+    Rigidbody rb;
+    LineRenderer aimingLine;
 
     public Enemy Owner { get; set;}
     #endregion
@@ -29,7 +37,7 @@ public class Laser : MonoBehaviour
     #region Unity Event Functions
     private void Start () 
 	{
-        //Debug.Log("My owner is" + Owner.gameObject.name);
+        rb = GetComponent<Rigidbody>();
 	}
 
 
@@ -58,7 +66,36 @@ public class Laser : MonoBehaviour
 
 
     #region Public Functions
+    public void UpdateAimAssist(float lineLength, float lineDuration)
+    {
+        Ray ray = new Ray(transform.position, rb.velocity.normalized);
+        RaycastHit hitInfo;
+        Physics.Raycast(ray, out hitInfo, 20f, shieldLayer);
 
+        if (hitInfo.point != Vector3.zero) Debug.DrawLine(ray.origin, hitInfo.point, Color.green, lineLength);
+        else Debug.DrawRay(ray.origin, ray.direction, Color.red, 3f);
+
+        // Update LineRenderer if we hit the players shield
+        if (hitInfo.point != Vector3.zero)
+        {
+            Vector3 reflection = Vector3.Reflect(ray.direction, hitInfo.normal);
+
+            // Spawn LineRenderer if called for the first time
+            if (aimingLine == null)
+            {
+                aimingLine = GameObject.Instantiate(aimingLinePrefab, hitInfo.point, Quaternion.identity, transform).GetComponent<LineRenderer>();
+                aimingLine.GetComponent<AimingLine>().LifeTime = lineDuration;
+                aimingLine.positionCount = 2;
+            }
+
+            aimingLine.SetPosition(0, hitInfo.point);
+            aimingLine.SetPosition(1, hitInfo.point + reflection * lineLength);
+        }
+        else if (hitInfo.point == Vector3.zero && aimingLine != null)
+        {
+            Destroy(aimingLine.gameObject);
+        }
+    }
     #endregion
 
 

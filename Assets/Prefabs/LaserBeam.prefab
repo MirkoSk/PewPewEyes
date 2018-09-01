@@ -244,6 +244,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 79f32a3c27c18d94da1a11385ab2e66a, type: 2}
+  shieldLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  aimingLinePrefab: {fileID: 1959629036657846, guid: f070e89a2daa5f14993c8e1b23f8af13,
+    type: 2}
 --- !u!135 &135722309305552684
 SphereCollider:
   m_ObjectHideFlags: 1

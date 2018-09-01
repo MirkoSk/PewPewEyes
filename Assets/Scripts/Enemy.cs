@@ -48,6 +48,10 @@ public class Enemy : MonoBehaviour
         {
             agent.SetDestination(GameManager.Instance.player.transform.position);
         }
+        else
+        {
+            agent.SetDestination(transform.position);
+        }
 
         transform.LookAt(GameManager.Instance.player.transform);
 
