@@ -16708,6 +16708,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1760695443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1062339062950150, guid: b10a11f3579aeb54c98e4bb9c8ba29b1,
+    type: 2}
+  m_PrefabInternal: {fileID: 2060824453}
+--- !u!135 &1760695446
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1760695443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1984202918
 GameObject:
   m_ObjectHideFlags: 0
@@ -16916,6 +16933,35 @@ Prefab:
     - target: {fileID: 4090481029631544, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053767023504356, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570155249763678, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114748631177709278, guid: b10a11f3579aeb54c98e4bb9c8ba29b1,
+        type: 2}
+      propertyPath: shieldLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053767023504356, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 10.473
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053767023504356, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 10.473
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053767023504356, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 10.473
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448213049165898, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
