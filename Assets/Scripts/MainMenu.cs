@@ -5,33 +5,19 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
-    public Button playButton;
-    public Button closeButton;
-    public Button creditsButton;
-    public Button quitApplicationCloseQuestionButton;
-    public Button closeCloseQuestionPanel;
 
     public GameObject closeQuestionPanel;
+    public string gameScene;
 
 
     public void PlayButton()
     {
-       // SceneManager.LoadScene(SCENENAME);
+       SceneManager.LoadScene(gameScene);
     }
 	
-    public void CloseButton()
-    {
-        closeQuestionPanel.SetActive(true);
-    }
-
-    public void CloseQuestionQuit()
-    {
-        closeQuestionPanel.SetActive(false);
-    }
-
     public void CreditsButton()
     {
-      //  SceneManager.LoadScene(SCENENAME);
+      //  SceneManager.LoadScene(Credits);
     }
 
     public void QuitApplication()
