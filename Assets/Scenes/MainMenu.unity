@@ -552,7 +552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.450012, y: 5.050003}
+  m_AnchoredPosition: {x: -13.450012, y: 5.049988}
   m_SizeDelta: {x: 35.9, y: 25.300001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &640515346
@@ -1051,6 +1051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeQuestionPanel: {fileID: 228801849}
+  gameScene: Main_Logic
 --- !u!1 &1295557202
 GameObject:
   m_ObjectHideFlags: 0
