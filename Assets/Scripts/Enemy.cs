@@ -44,11 +44,11 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, GameManager.Instance.Player.transform.position) >= 7f)
+        if (agent.isOnNavMesh && Vector3.Distance(transform.position, GameManager.Instance.Player.transform.position) >= 10f)
         {
             agent.SetDestination(GameManager.Instance.Player.transform.position);
         }
-        else
+        else if (agent.isOnNavMesh)
         {
             agent.SetDestination(transform.position);
         }
