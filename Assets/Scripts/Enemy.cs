@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 /// <summary>
 /// 
 /// </summary>
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody), typeof(NavMeshAgent))]
 public class Enemy : MonoBehaviour 
 {
 	
@@ -22,6 +23,7 @@ public class Enemy : MonoBehaviour
     int currentHP;
     float timer;
     bool wait = true;
+    NavMeshAgent agent;
 	#endregion
 	
 	
@@ -35,11 +37,18 @@ public class Enemy : MonoBehaviour
 	#region Unity Event Functions
 	private void Start () 
 	{
+        agent = GetComponent<NavMeshAgent>();
+
         currentHP = enemyType.hp;
 	}
 
     private void Update()
     {
+        if (Vector3.Distance(transform.position, GameManager.Instance.player.transform.position) >= 7f)
+        {
+            agent.SetDestination(GameManager.Instance.player.transform.position);
+        }
+
         transform.LookAt(GameManager.Instance.player.transform);
 
         if (!wait && timer >= shootInterval)
