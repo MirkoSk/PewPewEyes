@@ -25,13 +25,13 @@ namespace NGlow
             }
         }
 
-        public void PauseGame()
+        public void ShowCursor()
         {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;;
         }
 
-        public void ResumeGame()
+        public void HideCursor()
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

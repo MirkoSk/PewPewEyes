@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     // Serialized Fields
     [Space]
     [SerializeField] EnemyType enemyType;
+    [SerializeField] Score score;
 
     [Header("References")]
     [SerializeField] EnemyDeath death;
@@ -69,6 +70,7 @@ public class Enemy : MonoBehaviour
     {
         if (currentHP <= 0)
         {
+            score.IncreaseScore(enemyType.scoreOnDeath);
             death.ani.SetBool("death", true);
             Invoke("KillObj", 2.5f);
         }

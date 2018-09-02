@@ -10,10 +10,14 @@ public class Player : MonoBehaviour
 
     #region Variable Declarations
     // Serialized Fields
-    [SerializeField] int maxHP;
-    [SerializeField] GameEvent gameOverEvent;
+    [SerializeField] IntValue health;
+    [SerializeField] FloatValue slowMo;
+    [SerializeField] float slowingDownTime = 1f;
+    [SerializeField] float slowMoTimeScale = 0.25f;
+    [SerializeField] float slowMoTime = 3f;
     // Private
-    int currentHP;
+    float realTimer;
+    bool slowMoOnCoolDown = false;
 	#endregion
 	
 	
@@ -27,18 +31,56 @@ public class Player : MonoBehaviour
 	#region Unity Event Functions
 	private void Start () 
 	{
-        currentHP = maxHP;
+        health.value = health.maxValue;
+        slowMo.value = slowMo.maxValue;
 	}
-	#endregion
-	
-	
-	
-	#region Public Functions
-	
+
+    private void Update()
+    {
+        float timeDifference = TimeDifference(Time.realtimeSinceStartup);
+        if (Input.GetButton(Constants.INPUT_SLOWMO) && !slowMoOnCoolDown)
+        {
+            Time.timeScale -= slowingDownTime * timeDifference;
+            if(Time.timeScale < slowMoTimeScale)
+            {
+                Time.timeScale = slowMoTimeScale;
+            }
+            slowMo.changeValue(-timeDifference);
+        }
+        if(Time.timeScale != 0 && (!Input.GetButton(Constants.INPUT_SLOWMO) || slowMoOnCoolDown))
+        {
+            slowMoOnCoolDown = true;
+            slowMo.changeValue(timeDifference);
+            if (Time.timeScale != 1)
+            {
+                Time.timeScale += slowingDownTime * timeDifference;
+                if (Time.timeScale > 1)
+                {
+                    Time.timeScale = 1;
+                }
+            }
+        }
+        if(slowMo.value == 0)
+        {
+            slowMoOnCoolDown = true;
+        }
+        if(slowMo.value >= slowMo.maxValue && Time.timeScale == 1)
+        {
+            slowMoOnCoolDown = false;
+            slowMo.value = slowMo.maxValue;
+        }
+        Debug.Log(slowMo.value);
+        realTimer = Time.realtimeSinceStartup;
+    }
+    #endregion
+
+
+
+    #region Public Functions
+
     public void DealDamage(int amount)
     {
-        currentHP -= amount;
-        CheckDeath();
+        health.changeValue(amount);
     }
 
 	#endregion
@@ -46,15 +88,10 @@ public class Player : MonoBehaviour
 	
 	
 	#region Private Functions
-
-    private void CheckDeath()
+    private float TimeDifference(float currentTime)
     {
-        if(currentHP <= 0)
-        {
-            gameOverEvent.Raise();
-        }
+        return currentTime - realTimer;
     }
-
 	#endregion
 	
 	

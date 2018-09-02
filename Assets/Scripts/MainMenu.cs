@@ -9,12 +9,6 @@ public class MainMenu : MonoBehaviour {
     public GameObject closeQuestionPanel;
     public string gameScene;
 
-
-    public void PlayButton()
-    {
-       SceneManager.LoadScene(gameScene);
-    }
-	
     public void CreditsButton()
     {
       //  SceneManager.LoadScene(Credits);

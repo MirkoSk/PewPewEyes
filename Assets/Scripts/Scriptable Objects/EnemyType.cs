@@ -16,6 +16,7 @@ public class EnemyType : ScriptableObject
     public float moveStateDuration = 3f;
     public GameObject laserBeamPrefab;
     public float laserSpeed = 10f;
+    public int scoreOnDeath = 10;
 
     // Private
 
