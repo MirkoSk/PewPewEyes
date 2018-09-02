@@ -32,6 +32,7 @@ ModelImporter:
     400024: upperlayer
     400026: wallrot
     2100000: No Name
+    2100002: lambert1
     2300000: bridge
     2300002: gate
     2300004: lowerconnections
