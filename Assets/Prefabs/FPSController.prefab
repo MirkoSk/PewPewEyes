@@ -996,7 +996,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: b2e9a7ab974b8e547a4b3b63c3caab9b, type: 2}
-  - {fileID: 2100000, guid: 95b7a37d556d2a04f986c3bb024b9a44, type: 2}
+  - {fileID: 2100000, guid: 1be65674e7dc9a04aa105513c9f4b98e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1022,7 +1022,10 @@ SkinnedMeshRenderer:
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300006, guid: b9e4c45d05283ec4aacece66f7689f45, type: 3}
   m_Bones: []
-  m_BlendShapeWeights: []
+  m_BlendShapeWeights:
+  - 0
+  - 0
+  - 0
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: -0.000005523383, y: 0, z: -0.0021208134}
