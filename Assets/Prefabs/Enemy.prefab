@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 54471181632386380}
   - component: {fileID: 195523113831539924}
   m_Layer: 0
-  m_Name: NewEnemy
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: {fileID: 11400000, guid: 0fac61c3c10077d4493aec7399933cbc, type: 2}
-  score: {fileID: 0}
+  score: {fileID: 11400000, guid: a63d85d17dffcbd4fb6c551b402d6035, type: 2}
   death: {fileID: 114879498865388608}
   animator: {fileID: 95232454041168606}
 --- !u!114 &114879498865388608
