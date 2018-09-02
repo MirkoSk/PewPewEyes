@@ -26,6 +26,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected GameObject aimingLinePrefab;
     [SerializeField] protected StateMachine stateMachine;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource deathSoundSource;
+    public AudioSource shotSoundSource;
     // Private
     protected int currentHP;
     protected LineRenderer aimingLine;
@@ -127,6 +130,7 @@ public class Enemy : MonoBehaviour
 
     private void KillObj()
     {
+        deathSoundSource.Play();
         spawnManager.UnregisterEnemy(gameObject);
         Destroy(gameObject);
     }

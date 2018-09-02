@@ -80,7 +80,6 @@ public class Player : MonoBehaviour
     {
         health.changeValue(-amount);
     }
-
 	#endregion
 	
 	

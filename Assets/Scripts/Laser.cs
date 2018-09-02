@@ -64,6 +64,7 @@ public class Laser : MonoBehaviour
         }
         else if (collision.collider.CompareTag(Constants.TAG_SHIELD))
         {
+            collision.collider.GetComponent<AudioSource>().Play();
             trail.colorGradient = shotGoodGradient;
             isGood = true;
         }
