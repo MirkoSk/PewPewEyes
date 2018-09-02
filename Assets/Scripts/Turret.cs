@@ -18,6 +18,7 @@ public class Turret : MonoBehaviour
     [SerializeField] LayerMask playerLayerMask;
     [SerializeField] GameObject turretCharge;
     [SerializeField] GameObject turretBurst;
+    [SerializeField] AudioSource shotSoundSource;
     // Private
     float timer = 0f;
     Transform currentTarget;
@@ -58,6 +59,7 @@ public class Turret : MonoBehaviour
     #region Public Functions
     public void Shoot()
     {
+        shotSoundSource.Play();
         GameObject lazor = Instantiate(laser.laserPrefab, laserSpawnPoint.position, Quaternion.identity);
         lazor.GetComponent<Rigidbody>().velocity = ((player.transform.position + player.GetComponent<CharacterController>().velocity * Vector3.Distance(laserSpawnPoint.transform.position, player.position) / laser.laserSpeed) - laserSpawnPoint.position).normalized * laser.laserSpeed;
         Instantiate(turretBurst, laserSpawnPoint.position, Quaternion.identity);
