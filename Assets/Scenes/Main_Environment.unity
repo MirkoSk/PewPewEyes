@@ -319,7 +319,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.90432733, g: 0.88309896, b: 0.990566, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.03
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -439,7 +439,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 0.2
+  displayLightIntensity: 0.03
   displayAreaLightEmissiveMesh: 0
 --- !u!1001 &105405833
 Prefab:
@@ -552,7 +552,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 117984946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.01, y: -6.69, z: -1.26}
+  m_LocalPosition: {x: -5.26, y: -6.69, z: -1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 590089541}
@@ -702,7 +702,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 400
+  displayLightIntensity: 90.69
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &172306673
 Light:
@@ -714,7 +714,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.8915094, g: 0.9491733, b: 1, a: 1}
-  m_Intensity: 31.830988
+  m_Intensity: 7.216881
   m_Range: 22.34554
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -752,7 +752,7 @@ Transform:
   m_LocalScale: {x: 16.87, y: 16.87, z: 16.87}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &210403464
 GameObject:
@@ -852,7 +852,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 120.4
+  displayLightIntensity: 48.2
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &210403467
 Light:
@@ -864,7 +864,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.95038515, g: 0.8726415, b: 1, a: 1}
-  m_Intensity: 9.581127
+  m_Intensity: 3.835634
   m_Range: 14.6
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -898,11 +898,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 210403464}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -15.51, y: 4.47, z: -0.07}
+  m_LocalPosition: {x: -14.36, y: 4.47, z: -0.07}
   m_LocalScale: {x: 14.6, y: 14.6, z: 14.6}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &264740286
 GameObject:
@@ -1002,7 +1002,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 400
+  displayLightIntensity: 90.69
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &264740289
 Light:
@@ -1014,7 +1014,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.8915094, g: 0.9491733, b: 1, a: 1}
-  m_Intensity: 31.830988
+  m_Intensity: 7.216881
   m_Range: 22.34554
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1052,7 +1052,7 @@ Transform:
   m_LocalScale: {x: 16.87, y: 16.87, z: 16.87}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &297755887
 GameObject:
@@ -1076,7 +1076,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 297755887}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.25, y: -6.69, z: 1.35}
+  m_LocalPosition: {x: 3.87, y: -6.69, z: 3.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1767832790}
@@ -1551,7 +1551,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4973766455888814, guid: 0c93b63750ca8db468c68e25b9da27dd, type: 2}
       propertyPath: m_RootOrder
-      value: 32
+      value: 33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c93b63750ca8db468c68e25b9da27dd, type: 2}
@@ -1756,7 +1756,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 590089540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.67, y: 12.12, z: 17.08}
+  m_LocalPosition: {x: 29.59, y: 12.12, z: 17.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1985570727}
@@ -1970,7 +1970,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 0.2
+  displayLightIntensity: 0.03
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &645140168
 Light:
@@ -1982,7 +1982,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.90432733, g: 0.88309896, b: 0.990566, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.03
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2020,7 +2020,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 70.22401, y: 127.535, z: 125.866005}
 --- !u!1 &663569433
 GameObject:
@@ -2205,7 +2205,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 400
+  displayLightIntensity: 90.69
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &706886454
 Light:
@@ -2217,7 +2217,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.8915094, g: 0.9491733, b: 1, a: 1}
-  m_Intensity: 31.830988
+  m_Intensity: 7.216881
   m_Range: 22.34554
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2255,7 +2255,7 @@ Transform:
   m_LocalScale: {x: 16.87, y: 16.87, z: 16.87}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &714813384
 Prefab:
@@ -2294,7 +2294,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4530640970184154, guid: 8bcc9c128b43274468d0f40b3f0a3373, type: 2}
       propertyPath: m_RootOrder
-      value: 38
+      value: 39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bcc9c128b43274468d0f40b3f0a3373, type: 2}
@@ -2489,7 +2489,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 400
+  displayLightIntensity: 90.69
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &740694679
 Light:
@@ -2501,7 +2501,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.8915094, g: 0.9491733, b: 1, a: 1}
-  m_Intensity: 31.830988
+  m_Intensity: 7.216881
   m_Range: 22.34554
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2539,7 +2539,7 @@ Transform:
   m_LocalScale: {x: 16.87, y: 16.87, z: 16.87}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &760094270
 GameObject:
@@ -2818,7 +2818,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 65.8
+  displayLightIntensity: 32.8
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &882404458
 Light:
@@ -2830,7 +2830,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9622642, g: 0.8368333, b: 0.49474904, a: 1}
-  m_Intensity: 5.236198
+  m_Intensity: 2.610141
   m_Range: 9.4
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2868,7 +2868,7 @@ Transform:
   m_LocalScale: {x: 9.4, y: 9.4, z: 9.4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &917940007
 GameObject:
@@ -3110,7 +3110,7 @@ Transform:
   m_LocalScale: {x: 12.8, y: 12.8, z: 12.8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1122952627
 GameObject:
@@ -3522,7 +3522,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 120.4
+  displayLightIntensity: 91.7
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &1288616442
 Light:
@@ -3534,7 +3534,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.95038515, g: 0.8726415, b: 1, a: 1}
-  m_Intensity: 9.581127
+  m_Intensity: 7.2972536
   m_Range: 14.6
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -3568,11 +3568,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1288616439}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 15.03, y: 4.47, z: -0.07}
+  m_LocalPosition: {x: 12.18, y: 4.47, z: -0.07}
   m_LocalScale: {x: 14.6, y: 14.6, z: 14.6}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1333110716
 GameObject:
@@ -3722,7 +3722,7 @@ Transform:
   m_LocalScale: {x: 12.8, y: 12.8, z: 12.8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1418184116
 GameObject:
@@ -3935,7 +3935,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 400
+  displayLightIntensity: 90.69
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &1482641054
 Light:
@@ -3947,7 +3947,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.8915094, g: 0.9491733, b: 1, a: 1}
-  m_Intensity: 31.830988
+  m_Intensity: 7.216881
   m_Range: 22.34554
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -3985,7 +3985,7 @@ Transform:
   m_LocalScale: {x: 16.87, y: 16.87, z: 16.87}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566470087
 GameObject:
@@ -4272,7 +4272,7 @@ Transform:
   m_LocalScale: {x: 28.4, y: 28.4, z: 28.4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1636411539
 GameObject:
@@ -4422,7 +4422,7 @@ Transform:
   m_LocalScale: {x: 12.8, y: 12.8, z: 12.8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1650551655
 GameObject:
@@ -4755,7 +4755,7 @@ Transform:
   m_LocalScale: {x: 12.8, y: 12.8, z: 12.8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1671367936
 GameObject:
@@ -4783,7 +4783,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1692182545
 GameObject:
@@ -4883,7 +4883,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 600
+  displayLightIntensity: 124.1
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &1692182548
 Light:
@@ -4895,8 +4895,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.8915094, g: 0.9491733, b: 1, a: 1}
-  m_Intensity: 47.746483
-  m_Range: 16.9
+  m_Intensity: 9.875564
+  m_Range: 17.06
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -4929,11 +4929,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1692182545}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.03, y: 13.72, z: 0.14}
-  m_LocalScale: {x: 16.9, y: 16.9, z: 16.9}
+  m_LocalPosition: {x: -0.03, y: 12.14, z: 0.14}
+  m_LocalScale: {x: 17.06, y: 17.06, z: 17.06}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709478268
 GameObject:
@@ -5057,7 +5057,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4242622484022024, guid: 2cd6597e41dd91f40a2bcbe7436ef30b, type: 2}
       propertyPath: m_RootOrder
-      value: 34
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cd6597e41dd91f40a2bcbe7436ef30b, type: 2}
@@ -5085,7 +5085,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1767832789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.6, y: 12.12, z: -17.46}
+  m_LocalPosition: {x: -29.33, y: 11.87, z: -17.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1418184117}
@@ -5146,7 +5146,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4474920891057006, guid: 945a960178fd24640b4a18f8f656c4d6, type: 2}
       propertyPath: m_RootOrder
-      value: 37
+      value: 38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 945a960178fd24640b4a18f8f656c4d6, type: 2}
@@ -5188,7 +5188,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4322683693655460, guid: 3b1a90d116df5bb49b871924d76e6a72, type: 2}
       propertyPath: m_RootOrder
-      value: 36
+      value: 37
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b1a90d116df5bb49b871924d76e6a72, type: 2}
@@ -5291,7 +5291,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 65.8
+  displayLightIntensity: 33.4
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &1938851843
 Light:
@@ -5303,7 +5303,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9622642, g: 0.8368333, b: 0.49474904, a: 1}
-  m_Intensity: 5.236198
+  m_Intensity: 2.6578877
   m_Range: 9.4
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -5341,7 +5341,7 @@ Transform:
   m_LocalScale: {x: 9.4, y: 9.4, z: 9.4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1984202918
 GameObject:
@@ -5554,7 +5554,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 65.8
+  displayLightIntensity: 32.8
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &1993195175
 Light:
@@ -5566,7 +5566,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9622642, g: 0.8368333, b: 0.49474904, a: 1}
-  m_Intensity: 5.236198
+  m_Intensity: 2.610141
   m_Range: 9.4
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -5604,7 +5604,7 @@ Transform:
   m_LocalScale: {x: 9.4, y: 9.4, z: 9.4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2030641884
 GameObject:
@@ -7198,7 +7198,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 400
+  displayLightIntensity: 90.69
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &2074451267
 Light:
@@ -7210,7 +7210,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.8915094, g: 0.9491733, b: 1, a: 1}
-  m_Intensity: 31.830988
+  m_Intensity: 7.216881
   m_Range: 22.34554
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -7248,7 +7248,7 @@ Transform:
   m_LocalScale: {x: 16.87, y: 16.87, z: 16.87}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2074508008
 GameObject:
