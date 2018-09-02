@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
             }
         }
         score.score = 0;
+        PauseGame(false);
         Player = GameObject.FindGameObjectWithTag(Constants.TAG_PLAYER);
         ShieldController = GameObject.FindObjectOfType<ShieldController>();
 	}

@@ -69,7 +69,6 @@ public class Player : MonoBehaviour
             slowMoOnCoolDown = false;
             slowMo.value = slowMo.maxValue;
         }
-        Debug.Log(slowMo.value);
         realTimer = Time.realtimeSinceStartup;
     }
     #endregion
