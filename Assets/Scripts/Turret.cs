@@ -16,6 +16,8 @@ public class Turret : MonoBehaviour
     [SerializeField] float detectionRange = 20f;
     [SerializeField] float fireCoolDown = 3f;
     [SerializeField] LayerMask playerLayerMask;
+    [SerializeField] GameObject turretCharge;
+    [SerializeField] GameObject turretBurst;
     // Private
     float timer = 0f;
     Transform currentTarget;
@@ -46,6 +48,7 @@ public class Turret : MonoBehaviour
         if(currentTarget != null && timer <= 0f)
         {
             ani.SetTrigger("shoot");
+            turretCharge.SetActive(true);
         }
     }
     #endregion
@@ -57,6 +60,7 @@ public class Turret : MonoBehaviour
     {
         GameObject lazor = Instantiate(laser.laserPrefab, laserSpawnPoint.position, Quaternion.identity);
         lazor.GetComponent<Rigidbody>().velocity = ((player.transform.position + player.GetComponent<CharacterController>().velocity * Vector3.Distance(laserSpawnPoint.transform.position, player.position) / laser.laserSpeed) - laserSpawnPoint.position).normalized * laser.laserSpeed;
+        Instantiate(turretBurst, laserSpawnPoint.position, Quaternion.identity);
     }
     #endregion
 
