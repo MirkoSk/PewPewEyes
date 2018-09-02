@@ -27,7 +27,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1135774334256036
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,11 +865,11 @@ MonoBehaviour:
   laser: {fileID: 11400000, guid: 79f32a3c27c18d94da1a11385ab2e66a, type: 2}
   laserSpawnPoint: {fileID: 4696162258697940}
   detectionRange: 20
-  fireCoolDown: 3
+  fireCoolDown: 5
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 2048
-  turretCharge: {fileID: 1061260208246840}
+  chargeLaser: {fileID: 198676473950042146}
   turretBurst: {fileID: 1532201228917574, guid: e48cc5bf3012c654eb7aaeb998f8b279,
     type: 2}
   shotSoundSource: {fileID: 82779004982465420}
@@ -885,7 +885,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -5418,7 +5418,7 @@ ParticleSystem:
   stopAction: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -9951,7 +9951,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -14484,7 +14484,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -19071,7 +19071,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1

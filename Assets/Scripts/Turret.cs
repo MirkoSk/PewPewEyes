@@ -16,7 +16,7 @@ public class Turret : MonoBehaviour
     [SerializeField] float detectionRange = 20f;
     [SerializeField] float fireCoolDown = 3f;
     [SerializeField] LayerMask playerLayerMask;
-    [SerializeField] GameObject turretCharge;
+    [SerializeField] ParticleSystem chargeLaser;
     [SerializeField] GameObject turretBurst;
     [SerializeField] AudioSource shotSoundSource;
     // Private
@@ -46,11 +46,13 @@ public class Turret : MonoBehaviour
             currentTarget = collider.transform;
         if (player == null)
             player = currentTarget;
-        if(currentTarget != null && timer <= 0f)
+        if (currentTarget != null && timer >= fireCoolDown)
         {
             ani.SetTrigger("shoot");
-            turretCharge.SetActive(true);
+            timer = 0f;
         }
+
+        timer += Time.deltaTime;
     }
     #endregion
 
@@ -63,6 +65,12 @@ public class Turret : MonoBehaviour
         GameObject lazor = Instantiate(laser.laserPrefab, laserSpawnPoint.position, Quaternion.identity);
         lazor.GetComponent<Rigidbody>().velocity = ((player.transform.position + player.GetComponent<CharacterController>().velocity * Vector3.Distance(laserSpawnPoint.transform.position, player.position) / laser.laserSpeed) - laserSpawnPoint.position).normalized * laser.laserSpeed;
         Instantiate(turretBurst, laserSpawnPoint.position, Quaternion.identity);
+        currentTarget = null;
+    }
+
+    public void Charge()
+    {
+        chargeLaser.Play();
     }
     #endregion
 
