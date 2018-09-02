@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: M_Metal
+  m_Name: M_Metal Armor
   m_Shader: {fileID: 4800000, guid: 025cca8c1eb8a334fb951dcbfb654f39, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -19,11 +19,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_4A016B53:
-        m_Texture: {fileID: 2800000, guid: a1bb633cfca899c47a349cac98f3983a, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_7E4B6A98:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c4e40b37930d765479c45b1d04f1359a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_9737335:
@@ -145,7 +145,7 @@ Material:
     m_Floats:
     - Vector1_1715BB39: 0
     - Vector1_1FEA710: 10
-    - Vector1_2F8137F6: 5.3
+    - Vector1_2F8137F6: 4
     - Vector1_6F5B0085: 0.09
     - Vector1_782B46B9: 29.02
     - _AORemapMax: 1
@@ -258,10 +258,10 @@ Material:
     - _ZTestModeDistortion: 8
     - _ZWrite: 1
     m_Colors:
-    - Color_4C44071E: {r: 0.19917148, g: 0.017641688, b: 0, a: 0}
+    - Color_4C44071E: {r: 0.69803923, g: 0.05490196, b: 0, a: 0}
     - Color_5D152BC9: {r: 1, g: 0.6486544, b: 0, a: 0}
     - Color_7790304C: {r: 0, g: 0, b: 0, a: 1}
-    - Color_95FDEEA7: {r: 1, g: 0.7118942, b: 0.5801887, a: 0}
+    - Color_95FDEEA7: {r: 1, g: 0.51875174, b: 0.2971698, a: 0}
     - Color_C0F541F7: {r: 0.21554327, g: 0, b: 1, a: 0}
     - Vector3_71A7881A: {r: 0.2, g: 0.2, b: 0.2, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}

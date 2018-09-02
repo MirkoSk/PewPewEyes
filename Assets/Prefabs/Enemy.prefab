@@ -739,8 +739,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1842223594098196}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -2.443, y: 2.05, z: 11.61}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4865583013596902}
@@ -804,7 +804,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: ec9a3fc02463b2841b0984c0895ad95f, type: 2}
+  - {fileID: 2100000, guid: d6d9eb8494d6e224db17fa455809cb90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -839,7 +839,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: ca4f0b558c61a684e8836d0dcf1f70eb, type: 2}
+  - {fileID: 2100000, guid: d98847705c2764c4c8fca724fe44ae37, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -909,7 +909,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: ca4f0b558c61a684e8836d0dcf1f70eb, type: 2}
+  - {fileID: 2100000, guid: d98847705c2764c4c8fca724fe44ae37, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -979,7 +979,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: ca4f0b558c61a684e8836d0dcf1f70eb, type: 2}
+  - {fileID: 2100000, guid: d98847705c2764c4c8fca724fe44ae37, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1051,7 +1051,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: ec9a3fc02463b2841b0984c0895ad95f, type: 2}
+  - {fileID: 2100000, guid: d6d9eb8494d6e224db17fa455809cb90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1121,7 +1121,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: ca4f0b558c61a684e8836d0dcf1f70eb, type: 2}
+  - {fileID: 2100000, guid: d98847705c2764c4c8fca724fe44ae37, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
