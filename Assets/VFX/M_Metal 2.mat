@@ -26,6 +26,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: c4e40b37930d765479c45b1d04f1359a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Texture2D_9737335:
+        m_Texture: {fileID: 2800000, guid: 82647e29278cc5d4dbd7d935bbc4ddcd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_9B150D35:
+        m_Texture: {fileID: 2800000, guid: 69c150299675e884bba1bf5a2a53b238, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -127,7 +135,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_2F8137F6: 0
+    - Vector1_1715BB39: 0
+    - Vector1_2F8137F6: 1.32
     - Vector1_782B46B9: 29.02
     - _AORemapMax: 1
     - _AORemapMin: 0
@@ -151,6 +160,7 @@ Material:
     - _DisplacementLockObjectScale: 1
     - _DisplacementLockTilingScale: 1
     - _DisplacementMode: 0
+    - _Dissolve: 0
     - _DistortionBlendMode: 0
     - _DistortionBlurBlendMode: 0
     - _DistortionBlurDstBlend: 0
@@ -238,8 +248,9 @@ Material:
     - _ZTestModeDistortion: 8
     - _ZWrite: 1
     m_Colors:
-    - Color_7790304C: {r: 1, g: 1, b: 1, a: 0}
-    - Color_95FDEEA7: {r: 1, g: 0.6413853, b: 0.495283, a: 0}
+    - Color_4C44071E: {r: 19.46857, g: 0, b: 5.953656, a: 0}
+    - Color_7790304C: {r: 1, g: 0, b: 0.23516512, a: 0}
+    - Color_95FDEEA7: {r: 0.9150943, g: 0.68063235, b: 0.58272517, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}

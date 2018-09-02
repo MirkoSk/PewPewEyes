@@ -13,6 +13,7 @@ public class EnemyDeath : MonoBehaviour
     public Animator ani;
     [SerializeField] List<Transform> shells;
     [SerializeField] float initialVelocity;
+    [SerializeField] float dissolveTime = 1f;
     // Private
 
     #endregion
@@ -50,6 +51,14 @@ public class EnemyDeath : MonoBehaviour
             rb.drag = 0f;
             rb.mass = 5f;
             rb.velocity = transform.position + t.position * initialVelocity;
+
+            Material mat = t.GetComponent<Renderer>().material;
+            LeanTween.value(0f, 1f, dissolveTime).setEaseInOutQuad().setOnUpdate((float value) =>
+            {
+                Debug.Log(value);
+                mat.SetFloat("_Dissolve", value);
+            });
+            
         });
     }
 	#endregion
