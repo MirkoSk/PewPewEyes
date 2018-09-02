@@ -12,6 +12,7 @@ public class SpawnManager : MonoBehaviour
     // Serialized Fields
     [SerializeField] EnemyWave[] enemyWaves;
     [SerializeField] List<GameObject> spawnPoints;
+    [SerializeField] GameEvent wave1CompleteEvent, wave2CompleteEvent, wave3CompleteEvent;    
 
     /*
     [SerializeField] EnemyWave wave1;
@@ -25,6 +26,7 @@ public class SpawnManager : MonoBehaviour
     private int spawnedEnemiesCount = 0;
     private bool changeWave;
     private float timer = 0f;
+    private int currentWaveID = 1;
     private EnemyWave currentWave;
     private LinkedList<EnemyWave> waves;
 
@@ -106,6 +108,7 @@ public class SpawnManager : MonoBehaviour
 
         if (changeWave)
         {
+            GetEvent(currentWaveID).Raise();
             //Debug.Log(waves.Find(currentWave));
             if (!(waves.Find(currentWave) == waves.Last))
             {
@@ -113,6 +116,7 @@ public class SpawnManager : MonoBehaviour
                 currentWave.type1Amount = Mathf.RoundToInt((float)currentWave.enemyAmount / currentWave.type1Ratio);
                 currentWave.type2Amount = Mathf.RoundToInt((float)currentWave.enemyAmount / currentWave.type2Ratio);
                 changeWave = false;
+                currentWaveID += 1;
             }
             spawning = true;
         }
@@ -133,7 +137,20 @@ public class SpawnManager : MonoBehaviour
 
 
     #region Private Functions
-
+    private GameEvent GetEvent(int id)
+    {
+        switch (id)
+        {
+            case 1:
+                return wave1CompleteEvent;
+            case 2:
+                return wave2CompleteEvent;
+            case 3:
+                return wave3CompleteEvent;
+            default:
+                return wave1CompleteEvent;
+        }
+    }
     #endregion
 
 
