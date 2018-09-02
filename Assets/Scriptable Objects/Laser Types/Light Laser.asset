@@ -13,3 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   maxReflections: 4
+  laserSpeed: 30
+  laserPrefab: {fileID: 1468579894311436, guid: 998cd82d41ad1c2439b25b35624419f4,
+    type: 2}
