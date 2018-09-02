@@ -23,6 +23,9 @@ public class Enemy : MonoBehaviour
 
     // Private
     int currentHP;
+
+    // Public
+    [HideInInspector] public SpawnManager spawnManager;
     NavMeshAgent agent;
 	#endregion
 	
@@ -77,6 +80,7 @@ public class Enemy : MonoBehaviour
     }
     private void KillObj()
     {
+        spawnManager.UnregisterEnemy(gameObject);
         Destroy(gameObject);
     }
     #endregion

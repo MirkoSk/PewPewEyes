@@ -28,7 +28,7 @@ namespace NGlow
         public void ShowCursor()
         {
             Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;;
+            Cursor.visible = true;
         }
 
         public void HideCursor()
