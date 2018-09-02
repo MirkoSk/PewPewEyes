@@ -13,10 +13,9 @@ public class SceneLoader : ScriptableObject
 
     public void ChangeToGame()
     {
-        SceneManager.LoadScene(Constants.SCENE_LOGIC, LoadSceneMode.Additive);
+        SceneManager.LoadScene(Constants.SCENE_LOGIC, LoadSceneMode.Single);
         SceneManager.LoadScene(Constants.SCENE_GUI, LoadSceneMode.Additive);
         SceneManager.LoadScene(Constants.SCENE_ENVIRONMENT, LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync(Constants.SCENE_MENU);
     }
 
     public void ChangeToMainMenu()
