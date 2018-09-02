@@ -189,8 +189,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1230678327}
-        m_MethodName: CreditsButton
+      - m_Target: {fileID: 11400000, guid: 283c514d8c89d28469884a4257c99338, type: 2}
+        m_MethodName: ChangeToCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
