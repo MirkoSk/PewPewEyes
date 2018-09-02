@@ -366,6 +366,9 @@ MonoBehaviour:
   - {fileID: 708833338}
   - {fileID: 96708166}
   - {fileID: 577124545}
+  wave1CompleteEvent: {fileID: 11400000, guid: 1d5341031db438e4abc95db56ed69e94, type: 2}
+  wave2CompleteEvent: {fileID: 11400000, guid: 52806d90c339bb34bab7248f6f285482, type: 2}
+  wave3CompleteEvent: {fileID: 11400000, guid: fbe7643cb32144b4198534ccf4ccb7bc, type: 2}
 --- !u!1 &1085560653
 GameObject:
   m_ObjectHideFlags: 0

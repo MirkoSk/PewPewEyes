@@ -22,4 +22,9 @@ public class SceneLoader : ScriptableObject
     {
         SceneManager.LoadScene(Constants.SCENE_MENU, LoadSceneMode.Single);
     }
+
+    public void ChangeToCredits()
+    {
+        SceneManager.LoadScene(Constants.SCENE_CREDITS, LoadSceneMode.Single);
+    }
 }

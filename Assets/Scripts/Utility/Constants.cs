@@ -35,6 +35,7 @@ public class Constants
     public static readonly string SCENE_ENVIRONMENT = "Main_Environment";
     public static readonly string SCENE_GUI = "Main_GUI";
     public static readonly string SCENE_MENU = "MainMenu";
+    public static readonly string SCENE_CREDITS = "Credits";
     #endregion
 
     #region Sounds
