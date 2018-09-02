@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] FloatValue slowMo;
     [SerializeField] float slowingDownTime = 1f;
     [SerializeField] float slowMoTimeScale = 0.25f;
+    [SerializeField] AudioSource deathSoundSource;
     // Private
     float realTimer;
     bool slowMoOnCoolDown = false;
@@ -79,6 +80,11 @@ public class Player : MonoBehaviour
     public void DealDamage(int amount)
     {
         health.changeValue(-amount);
+    }
+
+    public void DIE()
+    {
+        deathSoundSource.Play();
     }
 	#endregion
 	
