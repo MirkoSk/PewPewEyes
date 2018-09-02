@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: M_Metal Shell
+  m_Name: M_Metal Ring
   m_Shader: {fileID: 4800000, guid: 025cca8c1eb8a334fb951dcbfb654f39, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
