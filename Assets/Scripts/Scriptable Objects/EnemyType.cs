@@ -11,22 +11,26 @@ public class EnemyType : ScriptableObject
 {
 
     #region Variable Declarations
-    // Serialized Fields
+    // Public
     public int hp;
-	// Private
-	
-	#endregion
-	
-	
-	
-	#region Public Properties
-	
-	#endregion
-	
-	
-	
-	#region Unity Event Functions
-	private void Start () 
+    public float moveStateDuration = 3f;
+    public GameObject laserBeamPrefab;
+    public float laserSpeed = 10f;
+
+    // Private
+
+    #endregion
+
+
+
+    #region Public Properties
+
+    #endregion
+
+
+
+    #region Unity Event Functions
+    private void Start () 
 	{
 		
 	}

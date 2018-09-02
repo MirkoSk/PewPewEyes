@@ -67,7 +67,7 @@ ModelImporter:
     4300016: BasicEnemy_Armor2
     4300018: BasicEnemy_Armor3
     4300020: BasicEnemy_Armor4
-    7400000: Idle
+    7400000: ChargeLaser
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -98,7 +98,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
+      name: ChargeLaser
       takeName: Take 001
       firstFrame: 5
       lastFrame: 82
@@ -108,7 +108,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

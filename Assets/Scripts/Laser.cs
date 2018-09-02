@@ -59,7 +59,7 @@ public class Laser : MonoBehaviour
             }
             else
             {
-                enemy.DealDamage(type.damage);
+                enemy.TakeDamage(type.damage);
             }
         }
         else if (collision.collider.CompareTag(Constants.TAG_SHIELD))

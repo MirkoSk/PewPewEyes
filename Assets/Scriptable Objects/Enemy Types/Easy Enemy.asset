@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Name: Easy Enemy
   m_EditorClassIdentifier: 
   hp: 10
+  moveStateDuration: 3
+  laserBeamPrefab: {fileID: 1468579894311436, guid: 998cd82d41ad1c2439b25b35624419f4,
+    type: 2}
+  laserSpeed: 40
