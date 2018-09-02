@@ -10,7 +10,7 @@ public class EnemyDeath : MonoBehaviour
 
     #region Variable Declarations
     // Serialized Fields
-    public Animator ani;
+    public Animator animator;
     [SerializeField] List<Transform> shells;
     [SerializeField] float initialVelocity;
     [SerializeField] float dissolveTime = 1f;
@@ -27,22 +27,23 @@ public class EnemyDeath : MonoBehaviour
 
 
     #region Unity Event Functions
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        ani.SetBool("death", true);
-    //    }
-    //}
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetBool("death", true);
+        }
+    }
     #endregion
 
 
 
     #region Public Functions
-
     public void DestroyEnemy()
     {
-        ani.enabled = false;
+        animator.enabled = false;
+
+
         shells.ForEach((Transform t) =>
         {
             //t.SetParent(null, true);
@@ -55,7 +56,6 @@ public class EnemyDeath : MonoBehaviour
             Material mat = t.GetComponent<Renderer>().material;
             LeanTween.value(0f, 1f, dissolveTime).setEaseInOutQuad().setOnUpdate((float value) =>
             {
-                Debug.Log(value);
                 mat.SetFloat("_Dissolve", value);
             });
             
