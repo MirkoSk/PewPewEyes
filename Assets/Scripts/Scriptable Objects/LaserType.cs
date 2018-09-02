@@ -14,20 +14,22 @@ public class LaserType : ScriptableObject
     // Serialized Fields
     public int damage;
     public int maxReflections;
-	// Private
-	
-	#endregion
-	
-	
-	
-	#region Public Properties
-	
-	#endregion
-	
-	
-	
-	#region Unity Event Functions
-	private void Start () 
+    public float laserSpeed;
+    public GameObject laserPrefab;
+    // Private
+
+    #endregion
+
+
+
+    #region Public Properties
+
+    #endregion
+
+
+
+    #region Unity Event Functions
+    private void Start () 
 	{
 		
 	}

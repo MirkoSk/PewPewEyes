@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     // Serialized Fields
     [Space]
     [SerializeField] EnemyType enemyType;
+    [SerializeField] LaserType laserType;
     [SerializeField] Score score;
 
     [Header("References")]
@@ -34,6 +35,7 @@ public class Enemy : MonoBehaviour
 	
 	#region Public Properties
 	public EnemyType EnemyType { get { return enemyType; } }
+	public LaserType LaserType { get { return laserType; } }
     public NavMeshAgent Agent { get { return agent; } }
     public Animator Animator { get { return animator; } }
     #endregion
@@ -84,7 +86,7 @@ public class Enemy : MonoBehaviour
 
     private void KillObj()
     {
-        //spawnManager.UnregisterEnemy(gameObject);
+        spawnManager.UnregisterEnemy(gameObject);
         Destroy(gameObject);
     }
     #endregion

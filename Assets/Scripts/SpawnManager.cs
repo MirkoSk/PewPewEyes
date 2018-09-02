@@ -82,6 +82,7 @@ public class SpawnManager : MonoBehaviour
                     Quaternion.identity);
                 timer = 0f;
                 spawnedEnemy.GetComponent<Enemy>().spawnManager = this;
+                spawnedEnemies.Add(spawnedEnemy);
                 if (enemyType == 1)
                 {
                     currentWave.type1Amount -= 1;
