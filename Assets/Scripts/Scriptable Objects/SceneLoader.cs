@@ -20,9 +20,6 @@ public class SceneLoader : ScriptableObject
 
     public void ChangeToMainMenu()
     {
-        SceneManager.LoadScene(Constants.SCENE_MENU, LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync(Constants.SCENE_LOGIC);
-        SceneManager.UnloadSceneAsync(Constants.SCENE_GUI);
-        SceneManager.UnloadSceneAsync(Constants.SCENE_ENVIRONMENT);
+        SceneManager.LoadScene(Constants.SCENE_MENU, LoadSceneMode.Single);
     }
 }
