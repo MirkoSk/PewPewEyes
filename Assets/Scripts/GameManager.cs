@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     // Private
     private bool gameIsPaused;
-    private float oldTimeScale;
+    private float normalTimeScale = 1f;
 
     // Public
     [HideInInspector] public GameObject Player;
@@ -70,9 +70,7 @@ public class GameManager : MonoBehaviour
     #region Public Functions
     public void PauseGame(bool state)
     {
-        if (state)
-            oldTimeScale = Time.timeScale;
-        Time.timeScale = state == true ? 0 : oldTimeScale;
+        Time.timeScale = state == true ? 0 : normalTimeScale;
     }
     #endregion
 
