@@ -15,6 +15,7 @@ public class ShieldController : MonoBehaviour
     [SerializeField] Transform shieldDownPosition;
     [SerializeField] float liftDuration = 0.3f;
     [SerializeField] LeanTweenType tweenType;
+    [SerializeField] Animator animator;
 
     // Private
     bool shieldUp;
@@ -39,13 +40,17 @@ public class ShieldController : MonoBehaviour
         // Raise shield
         if (Input.GetButtonDown(Constants.INPUT_SHIELD))
         {
+            animator.SetBool("shieldUp", true);
+
             LeanTween.cancelAll(shield);
             LeanTween.moveLocal(shield, shieldUpPosition.localPosition, liftDuration).setEase(tweenType);
             LeanTween.scale(shield, shieldUpPosition.localScale, liftDuration).setOnComplete(() => { shieldUp = true; });
         }
         // Lower shield
-        else if (Input.GetButtonUp(Constants.INPUT_SHIELD)) 
+        else if (Input.GetButtonUp(Constants.INPUT_SHIELD))
         {
+            animator.SetBool("shieldUp", false);
+
             LeanTween.cancelAll(shield);
             LeanTween.moveLocal(shield, shieldDownPosition.localPosition, liftDuration).setEase(tweenType);
             LeanTween.scale(shield, shieldDownPosition.localScale, liftDuration).setOnComplete(() => { shieldUp = false; });

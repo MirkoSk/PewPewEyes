@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     [SerializeField] FloatValue slowMo;
     [SerializeField] float slowingDownTime = 1f;
     [SerializeField] float slowMoTimeScale = 0.25f;
-    [SerializeField] float slowMoTime = 3f;
     // Private
     float realTimer;
     bool slowMoOnCoolDown = false;
@@ -69,7 +68,6 @@ public class Player : MonoBehaviour
             slowMoOnCoolDown = false;
             slowMo.value = slowMo.maxValue;
         }
-        Debug.Log(slowMo.value);
         realTimer = Time.realtimeSinceStartup;
     }
     #endregion
@@ -80,7 +78,7 @@ public class Player : MonoBehaviour
 
     public void DealDamage(int amount)
     {
-        health.changeValue(amount);
+        health.changeValue(-amount);
     }
 
 	#endregion

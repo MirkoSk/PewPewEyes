@@ -14,9 +14,10 @@ public class ChargeLaser : State
     [SerializeField] Enemy enemy;
     [SerializeField] float chargeDuration = 2f;
     [SerializeField] GameObject nextState;
+    [SerializeField] ParticleSystem chargeParticleSystem;
 
     // Private
-    float timer;
+
     #endregion
 
 
@@ -30,14 +31,14 @@ public class ChargeLaser : State
     #region Unity Event Functions
     private void Start()
     {
-
+        
     }
 
     private void OnEnable()
     {
         enemy.Agent.SetDestination(enemy.transform.position);
+        chargeParticleSystem.Play();
         enemy.Animator.SetBool("chargeLaser", true);
-        timer = 0f;
     }
 
     private void OnDisable()
@@ -50,20 +51,16 @@ public class ChargeLaser : State
         enemy.transform.LookAt(GameManager.Instance.Player.transform.position 
             + GameManager.Instance.Player.GetComponent<CharacterController>().velocity 
             * Vector3.Distance(enemy.transform.position, GameManager.Instance.Player.transform.position) / enemy.EnemyType.laserSpeed);
-
-        if (enemy.Animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && timer > 1f)
-        {
-            ChangeState(nextState);
-        }
-
-        timer += Time.deltaTime;
     }
     #endregion
 
 
 
     #region Public Functions
+    public void ShootLaser()
+    {
 
+    }
     #endregion
 
 

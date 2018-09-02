@@ -26,6 +26,18 @@ Material:
         m_Texture: {fileID: 2800000, guid: c4e40b37930d765479c45b1d04f1359a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Texture2D_9737335:
+        m_Texture: {fileID: 2800000, guid: 087c117b3d66b3f4ab74573ba9948db9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_9B150D35:
+        m_Texture: {fileID: 2800000, guid: 69c150299675e884bba1bf5a2a53b238, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_E25DEB6C:
+        m_Texture: {fileID: 2800000, guid: 445b7bfb9acba9041812814e67216226, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -86,6 +98,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_714A2F12_Texture:
+        m_Texture: {fileID: 2800000, guid: 82647e29278cc5d4dbd7d935bbc4ddcd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -127,7 +143,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_2F8137F6: 0
+    - Vector1_1715BB39: 0
+    - Vector1_1FEA710: 10
+    - Vector1_2F8137F6: 0.86
+    - Vector1_6F5B0085: 0.09
     - Vector1_782B46B9: 29.02
     - _AORemapMax: 1
     - _AORemapMin: 0
@@ -238,8 +257,12 @@ Material:
     - _ZTestModeDistortion: 8
     - _ZWrite: 1
     m_Colors:
-    - Color_7790304C: {r: 1, g: 0.7874855, b: 0, a: 0}
-    - Color_95FDEEA7: {r: 1, g: 0.64102566, b: 0, a: 0}
+    - Color_4C44071E: {r: 0.19917148, g: 0.017641688, b: 0, a: 0}
+    - Color_5D152BC9: {r: 1, g: 0.6486544, b: 0, a: 0}
+    - Color_7790304C: {r: 0, g: 0, b: 0, a: 1}
+    - Color_95FDEEA7: {r: 1, g: 0.3122662, b: 0, a: 0}
+    - Color_C0F541F7: {r: 0.21554327, g: 0, b: 1, a: 0}
+    - Vector3_71A7881A: {r: 0.2, g: 0.2, b: 0.2, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
