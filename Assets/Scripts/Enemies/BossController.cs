@@ -5,15 +5,18 @@ using UnityEngine;
 /// <summary>
 /// 
 /// </summary>
-public class BossController : MonoBehaviour 
+public class BossController : Enemy
 {
 
     #region Variable Declarations
     // Serialized Fields
+    [Space]
     [SerializeField] float activationDelay = 0.18f;
     [SerializeField] float flightHeight = 10f;
     [SerializeField] float smoothTime = 0.1f;
-    [SerializeField] Animator animator;
+    [SerializeField] float dissolveTime = 5f;
+
+    [Header("References")]
     [SerializeField] GameEvent gameEvent;
 
     // Private
@@ -34,11 +37,13 @@ public class BossController : MonoBehaviour
 	private void Start () 
 	{
         targetPosition = transform.position + Vector3.up * flightHeight;
-
+        currentHP = enemyType.hp;
     }
 
     private void Update()
     {
+        if (Input.GetButtonDown("Jump")) gameEvent.Raise();
+
         if (active)
         {
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref currentVelocity, smoothTime);
@@ -64,21 +69,44 @@ public class BossController : MonoBehaviour
     {
 
     }
-	#endregion
-	
-	
-	
-	#region Private Functions
+    #endregion
+
+
+
+    #region Private Functions
     void ActivateDelayed()
     {
         animator.SetTrigger("activate");
         active = true;
+        stateMachine.ChangeState("Move");
     }
-	#endregion
-	
-	
-	
-	#region Coroutines
-	
-	#endregion
+
+    private void CheckDeath()
+    {
+        if (currentHP <= 0)
+        {
+            //animator.SetBool("death", true);
+            //transform.Find("States").GetComponent<StateMachine>().ChangeState(deathState);
+            score.IncreaseScore(enemyType.scoreOnDeath);
+            Invoke("KillObj", animator.GetComponent<EnemyAnimatorEventFunctions>().DissolveTime);
+        }
+
+        //Material mat = GetComponent<Renderer>().material;
+        //LeanTween.value(0f, 1f, dissolveTime).setEaseInOutQuad().setOnUpdate((float value) =>
+        //{
+        //    mat.SetFloat("_Dissolve", value);
+        //});
+    }
+
+    private void KillObj()
+    {
+        Destroy(gameObject);
+    }
+    #endregion
+
+
+
+    #region Coroutines
+
+    #endregion
 }

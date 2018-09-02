@@ -15,24 +15,24 @@ public class Enemy : MonoBehaviour
     #region Variable Declarations
     // Serialized Fields
     [Space]
-    [SerializeField] EnemyType enemyType;
-    [SerializeField] LaserType laserType;
-    [SerializeField] Score score;
+    [SerializeField] protected EnemyType enemyType;
+    [SerializeField] protected LaserType laserType;
+    [SerializeField] protected Score score;
 
     [Header("References")]
-    [SerializeField] Animator animator;
-    [SerializeField] GameObject deathState;
-    [SerializeField] LayerMask shieldLayer;
-    [SerializeField] GameObject aimingLinePrefab;
-    [SerializeField] StateMachine stateMachine;
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected GameObject deathState;
+    [SerializeField] protected LayerMask shieldLayer;
+    [SerializeField] protected GameObject aimingLinePrefab;
+    [SerializeField] protected StateMachine stateMachine;
 
     [Header("Audio")]
     [SerializeField] AudioSource deathSoundSource;
     public AudioSource shotSoundSource;
     // Private
-    int currentHP;
-    LineRenderer aimingLine;
-    NavMeshAgent agent;
+    protected int currentHP;
+    protected LineRenderer aimingLine;
+    protected NavMeshAgent agent;
 
     // Public
     [HideInInspector] public SpawnManager spawnManager;
