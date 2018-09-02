@@ -56,7 +56,7 @@ public class Turret : MonoBehaviour
     public void Shoot()
     {
         GameObject lazor = Instantiate(laser.laserPrefab, laserSpawnPoint.position, Quaternion.identity);
-        lazor.GetComponent<Rigidbody>().velocity = (player.position - laserSpawnPoint.position).normalized * laser.laserSpeed;
+        lazor.GetComponent<Rigidbody>().velocity = ((player.transform.position + player.GetComponent<CharacterController>().velocity * Vector3.Distance(laserSpawnPoint.transform.position, player.position) / laser.laserSpeed) - laserSpawnPoint.position).normalized * laser.laserSpeed;
     }
     #endregion
 
