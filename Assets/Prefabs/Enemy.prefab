@@ -568,8 +568,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1842223594098196}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.9, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 14.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4200515329660580}
@@ -1292,7 +1292,7 @@ MonoBehaviour:
   defaultState: {fileID: 1297081900701532}
   currentState: {fileID: 0}
   _unityEventsFolded: 0
-  verbose: 1
+  verbose: 0
   allowReentry: 0
   returnToDefaultOnDisable: 1
   OnStateExited:
