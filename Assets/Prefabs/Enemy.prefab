@@ -1560,6 +1560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: {fileID: 11400000, guid: 0fac61c3c10077d4493aec7399933cbc, type: 2}
+  laserType: {fileID: 11400000, guid: 79f32a3c27c18d94da1a11385ab2e66a, type: 2}
   score: {fileID: 11400000, guid: a63d85d17dffcbd4fb6c551b402d6035, type: 2}
   animator: {fileID: 95232454041168606}
   deathState: {fileID: 1259197909619322}

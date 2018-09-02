@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0
@@ -122,7 +122,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 708833340}
-  - component: {fileID: 708833339}
   m_Layer: 0
   m_Name: SpawnPoint (1)
   m_TagString: Untagged
@@ -130,22 +129,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &708833339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 708833338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a0b930bb3d03543a81172edfdf0ed5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 1842223594098196, guid: 4e102f5521aa0da46be73cdb56357433, type: 2}
-  spawnInterval:
-    minValue: 10.477299
-    maxValue: 18.335274
 --- !u!4 &708833340
 Transform:
   m_ObjectHideFlags: 0
@@ -333,7 +316,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1085560654}
-  - component: {fileID: 1085560655}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -354,22 +336,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1085560655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1085560653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a0b930bb3d03543a81172edfdf0ed5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 1842223594098196, guid: 4e102f5521aa0da46be73cdb56357433, type: 2}
-  spawnInterval:
-    minValue: 10.477299
-    maxValue: 18.335274
 --- !u!1001 &2060824453
 Prefab:
   m_ObjectHideFlags: 0
@@ -377,6 +343,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 137724132160563588, guid: b10a11f3579aeb54c98e4bb9c8ba29b1,
+        type: 2}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4090481029631544, guid: b10a11f3579aeb54c98e4bb9c8ba29b1, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0

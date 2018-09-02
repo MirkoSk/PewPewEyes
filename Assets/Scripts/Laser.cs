@@ -13,7 +13,7 @@ public class Laser : MonoBehaviour
     #region Variable Declarations
 
     // Serialized Fields
-    [SerializeField] LaserType type;
+    public LaserType type;
 
     [Header("References")]
     [SerializeField] LayerMask shieldLayer;

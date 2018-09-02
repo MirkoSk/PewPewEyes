@@ -50,7 +50,7 @@ public class ChargeLaser : State
     {
         enemy.transform.LookAt(GameManager.Instance.Player.transform.position 
             + GameManager.Instance.Player.GetComponent<CharacterController>().velocity 
-            * Vector3.Distance(enemy.transform.position, GameManager.Instance.Player.transform.position) / enemy.EnemyType.laserSpeed);
+            * Vector3.Distance(enemy.transform.position, GameManager.Instance.Player.transform.position) / enemy.LaserType.laserSpeed);
     }
     #endregion
 

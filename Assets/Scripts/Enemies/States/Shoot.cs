@@ -34,8 +34,8 @@ public class Shoot : State
 
     private void OnEnable()
     {
-        GameObject laser = GameObject.Instantiate(enemy.EnemyType.laserBeamPrefab, transform.position + transform.forward + Vector3.up * 0.5f, Quaternion.identity);
-        laser.GetComponent<Rigidbody>().velocity = transform.forward * enemy.EnemyType.laserSpeed;
+        GameObject laser = GameObject.Instantiate(enemy.LaserType.laserPrefab, transform.position + transform.forward + Vector3.up * 0.5f, Quaternion.identity);
+        laser.GetComponent<Rigidbody>().velocity = transform.forward * enemy.LaserType.laserSpeed;
         laser.GetComponent<Laser>().Owner = enemy;
         ChangeState(nextState);
     }
