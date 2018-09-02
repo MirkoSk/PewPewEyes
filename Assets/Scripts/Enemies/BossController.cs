@@ -17,7 +17,7 @@ public class BossController : Enemy
     [SerializeField] float dissolveTime = 5f;
 
     [Header("References")]
-    [SerializeField] GameEvent gameEvent;
+    [SerializeField] GameEvent winEvent;
 
     // Private
     Vector3 currentVelocity;
@@ -42,8 +42,6 @@ public class BossController : Enemy
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump")) gameEvent.Raise();
-
         if (active)
         {
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref currentVelocity, smoothTime);
@@ -67,7 +65,7 @@ public class BossController : Enemy
 
     public void Death()
     {
-
+        winEvent.Raise();
     }
     #endregion
 
