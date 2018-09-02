@@ -107,7 +107,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4200515329660580}
   - component: {fileID: 95232454041168606}
-  - component: {fileID: 114879498865388608}
   - component: {fileID: 114470759930285132}
   m_Layer: 0
   m_Name: BasicEnemy_Animation
@@ -129,6 +128,22 @@ GameObject:
   - component: {fileID: 64323896364146566}
   m_Layer: 0
   m_Name: BasicEnemy_Shell4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1259197909619322
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4957598485117878}
+  - component: {fileID: 114035222868040028}
+  m_Layer: 0
+  m_Name: Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -684,6 +699,7 @@ Transform:
   - {fileID: 4446688577583620}
   - {fileID: 4057211131051970}
   - {fileID: 4462334172063608}
+  - {fileID: 4957598485117878}
   m_Father: {fileID: 4896834953033654}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -724,7 +740,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1842223594098196}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 6.25, y: 1, z: 14.63}
+  m_LocalPosition: {x: 4.02, y: 1, z: 14.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4865583013596902}
@@ -759,6 +775,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4200515329660580}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4957598485117878
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259197909619322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4760231013900374}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23114454834387594
 MeshRenderer:
@@ -1397,6 +1426,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114035222868040028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259197909619322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaefd3d5a2a864ca5b5d9ec5f2a7040f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114193234631290000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1434,6 +1474,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateMachine: {fileID: 114750429532557174}
   shootState: {fileID: 1103543580198560}
+  shells:
+  - {fileID: 4319396625536276}
+  - {fileID: 4607372724323828}
+  - {fileID: 4878930128087932}
+  - {fileID: 4380920092436022}
+  - {fileID: 4058716875131072}
+  - {fileID: 4251875380113446}
+  - {fileID: 4621358107333754}
+  - {fileID: 4946522280766348}
+  - {fileID: 4146631170510180}
+  - {fileID: 4555536923996052}
+  eye: {fileID: 1272218930907128}
+  initialVelocity: 0
+  dissolveTime: 5
 --- !u!114 &114647043280074410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1507,33 +1561,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: {fileID: 11400000, guid: 0fac61c3c10077d4493aec7399933cbc, type: 2}
   score: {fileID: 11400000, guid: a63d85d17dffcbd4fb6c551b402d6035, type: 2}
-  death: {fileID: 114879498865388608}
   animator: {fileID: 95232454041168606}
---- !u!114 &114879498865388608
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1145633489403176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ab0deaee8a237d4fac2bd4e743894a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ani: {fileID: 95232454041168606}
-  shells:
-  - {fileID: 4319396625536276}
-  - {fileID: 4607372724323828}
-  - {fileID: 4878930128087932}
-  - {fileID: 4380920092436022}
-  - {fileID: 4058716875131072}
-  - {fileID: 4251875380113446}
-  - {fileID: 4621358107333754}
-  - {fileID: 4946522280766348}
-  - {fileID: 4146631170510180}
-  - {fileID: 4555536923996052}
-  initialVelocity: 0.1
-  dissolveTime: 1
+  deathState: {fileID: 1259197909619322}
+  spawnManager: {fileID: 0}
 --- !u!114 &114943548701486152
 MonoBehaviour:
   m_ObjectHideFlags: 1

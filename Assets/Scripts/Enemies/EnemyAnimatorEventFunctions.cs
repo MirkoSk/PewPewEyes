@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pixelplacement;
 
 /// <summary>
 /// 
 /// </summary>
-public class EnemyDeath : MonoBehaviour 
+public class EnemyAnimatorEventFunctions : MonoBehaviour 
 {
 
     #region Variable Declarations
     // Serialized Fields
-    public Animator animator;
+    [SerializeField] StateMachine stateMachine;
+    [SerializeField] GameObject shootState;
     [SerializeField] List<Transform> shells;
+    [SerializeField] GameObject eye;
     [SerializeField] float initialVelocity;
     [SerializeField] float dissolveTime = 1f;
     // Private
@@ -21,32 +24,34 @@ public class EnemyDeath : MonoBehaviour
 
 
     #region Public Properties
-
+    public float DissolveTime { get { return dissolveTime; } }
     #endregion
 
 
 
     #region Unity Event Functions
-    private void Update()
+    private void Start () 
+	{
+        
+	}
+	#endregion
+	
+	
+	
+	#region Public Functions
+	public void ShootLaser()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            animator.SetBool("death", true);
-        }
+        stateMachine.ChangeState(shootState);
     }
-    #endregion
 
-
-
-    #region Public Functions
-    public void DestroyEnemy()
+    public void Explode()
     {
-        animator.enabled = false;
+        GetComponent<Animator>().enabled = false;
 
+        eye.SetActive(false);
 
         shells.ForEach((Transform t) =>
         {
-            //t.SetParent(null, true);
             Rigidbody rb = t.gameObject.AddComponent<Rigidbody>();
             t.gameObject.GetComponent<MeshCollider>().enabled = true;
             rb.drag = 0f;
@@ -58,7 +63,7 @@ public class EnemyDeath : MonoBehaviour
             {
                 mat.SetFloat("_Dissolve", value);
             });
-            
+
         });
     }
 	#endregion

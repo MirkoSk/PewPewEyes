@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Pixelplacement;
 
 /// <summary>
 /// 
@@ -18,8 +19,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] Score score;
 
     [Header("References")]
-    [SerializeField] EnemyDeath death;
     [SerializeField] Animator animator;
+    [SerializeField] GameObject deathState;
 
     // Private
     int currentHP;
@@ -73,14 +74,17 @@ public class Enemy : MonoBehaviour
     {
         if (currentHP <= 0)
         {
+            animator.SetBool("death", true);
+            agent.SetDestination(transform.position);
+            transform.Find("States").GetComponent<StateMachine>().ChangeState(deathState);
             score.IncreaseScore(enemyType.scoreOnDeath);
-            death.ani.SetBool("death", true);
-            Invoke("KillObj", 2.5f);
+            Invoke("KillObj", animator.GetComponent<EnemyAnimatorEventFunctions>().DissolveTime);
         }
     }
+
     private void KillObj()
     {
-        spawnManager.UnregisterEnemy(gameObject);
+        //spawnManager.UnregisterEnemy(gameObject);
         Destroy(gameObject);
     }
     #endregion
