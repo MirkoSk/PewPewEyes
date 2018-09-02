@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     // Serialized Fields
     [SerializeField] GameEvent pauseEvent;
+    [SerializeField] Score score;
 
     // Private
     private bool gameIsPaused;
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
+        score.score = 0;
         Player = GameObject.FindGameObjectWithTag(Constants.TAG_PLAYER);
         ShieldController = GameObject.FindObjectOfType<ShieldController>();
 	}
