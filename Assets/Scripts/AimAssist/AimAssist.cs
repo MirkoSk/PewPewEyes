@@ -36,9 +36,16 @@ public class AimAssist : MonoBehaviour
     {
         Rigidbody rb = other.GetComponentInParent<Rigidbody>();
 
-        if (rb != null && rb.CompareTag(Constants.TAG_LASER))
+        if (rb != null)
         {
-            rb.GetComponent<Laser>().UpdateAimAssist(lineLength, lineDuration);
+            if (rb.CompareTag(Constants.TAG_LASER))
+            {
+                rb.GetComponent<Laser>().UpdateAimAssist(lineLength, lineDuration);
+            }
+            else if (rb.CompareTag(Constants.TAG_ENEMY))
+            {
+                rb.GetComponent<Enemy>().UpdateAimAssist(lineLength, lineDuration);
+            }
         }
     }
     #endregion

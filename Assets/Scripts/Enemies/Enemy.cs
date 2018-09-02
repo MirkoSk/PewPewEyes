@@ -22,13 +22,17 @@ public class Enemy : MonoBehaviour
     [Header("References")]
     [SerializeField] Animator animator;
     [SerializeField] GameObject deathState;
+    [SerializeField] LayerMask shieldLayer;
+    [SerializeField] GameObject aimingLinePrefab;
+    [SerializeField] StateMachine stateMachine;
 
     // Private
     int currentHP;
+    LineRenderer aimingLine;
+    NavMeshAgent agent;
 
     // Public
     [HideInInspector] public SpawnManager spawnManager;
-    NavMeshAgent agent;
 	#endregion
 	
 	
@@ -38,6 +42,7 @@ public class Enemy : MonoBehaviour
 	public LaserType LaserType { get { return laserType; } }
     public NavMeshAgent Agent { get { return agent; } }
     public Animator Animator { get { return animator; } }
+    public LineRenderer AimingLine { get { return aimingLine; } }
     #endregion
 
 
@@ -66,6 +71,42 @@ public class Enemy : MonoBehaviour
     {
         currentHP -= amount;
         CheckDeath();
+    }
+
+    public void UpdateAimAssist(float lineLength, float lineDuration)
+    {
+        if (stateMachine.currentState.name == "Shoot" && aimingLine != null) Destroy(aimingLine.gameObject);
+
+        if (!GameManager.Instance.ShieldController.ShieldUp || stateMachine.currentState.name != "ChargeLaser") return;
+
+        Ray ray = new Ray(transform.position + transform.forward, transform.forward);
+        RaycastHit hitInfo;
+        Physics.Raycast(ray, out hitInfo, 20f, shieldLayer);
+
+        if (hitInfo.point != Vector3.zero) Debug.DrawLine(ray.origin, hitInfo.point, Color.green, lineLength);
+        else Debug.DrawRay(ray.origin, ray.direction, Color.red, 3f);
+
+        // Update LineRenderer if we hit the players shield
+        if (hitInfo.point != Vector3.zero)
+        {
+            Vector3 reflection = Vector3.Reflect(ray.direction, hitInfo.normal);
+
+            // Spawn LineRenderer if called for the first time
+            if (aimingLine == null)
+            {
+                aimingLine = GameObject.Instantiate(aimingLinePrefab, hitInfo.point, Quaternion.identity, transform).GetComponent<LineRenderer>();
+                aimingLine.GetComponent<AimingLine>().LifeTime = lineDuration;
+                aimingLine.positionCount = 3;
+            }
+
+            aimingLine.SetPosition(0, transform.position);
+            aimingLine.SetPosition(1, hitInfo.point);
+            aimingLine.SetPosition(2, hitInfo.point + reflection * lineLength);
+        }
+        else if (hitInfo.point == Vector3.zero && aimingLine != null)
+        {
+            Destroy(aimingLine.gameObject);
+        }
     }
     #endregion
 
