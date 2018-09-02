@@ -50,8 +50,6 @@ public class SceneController : MonoBehaviour
     #region Private Functions
     private void LoadScene(string scene)
     {
-        Debug.Log(SceneManager.GetSceneByName(scene).name);
-
         if (!SceneManager.GetSceneByName(scene).IsValid())
         {
             SceneManager.LoadScene(scene, LoadSceneMode.Additive);

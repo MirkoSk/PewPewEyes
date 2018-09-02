@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
     public void DealDamage(int amount)
     {
         currentHP -= amount;
+        CheckDeath();
     }
 
 	#endregion
