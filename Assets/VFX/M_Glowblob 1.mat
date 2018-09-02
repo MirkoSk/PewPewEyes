@@ -234,10 +234,10 @@ Material:
     m_Colors:
     - Color_D2851B95: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 20.865906, g: 6.226998, b: 0, a: 1}
+    - _Color: {r: 2.1185474, g: 0.63223666, b: 0, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 20.865906, g: 6.226998, b: 0, a: 1}
+    - _EmissiveColor: {r: 2.1185474, g: 0.63223666, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
