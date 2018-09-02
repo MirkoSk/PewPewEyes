@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c744e3fa36010d442b32a6f987ae3b1e, type: 3}
   m_Name: SlowMo
   m_EditorClassIdentifier: 
-  value: 0
-  maxValue: 0
+  value: 3
+  maxValue: 3
   respondeWithNullValueEvent: 0
   nullValueEvent: {fileID: 0}
   respondeWithFullValueEvent: 0

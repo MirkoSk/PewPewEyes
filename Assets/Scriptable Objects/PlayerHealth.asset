@@ -11,6 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9400a6f2419d66f46b98cdee2fcb299d, type: 3}
   m_Name: PlayerHealth
   m_EditorClassIdentifier: 
-  health: -10
-  maxHealth: 100
-  gameOverEvent: {fileID: 11400000, guid: 063f6dd6211e82d4e912e348e9b1bec7, type: 2}
+  value: 100
+  maxValue: 100
+  respondeWithNullValueEvent: 1
+  nullValueEvent: {fileID: 11400000, guid: 063f6dd6211e82d4e912e348e9b1bec7, type: 2}
+  respondeWithFullValueEvent: 0
+  fullValueEvent: {fileID: 0}
