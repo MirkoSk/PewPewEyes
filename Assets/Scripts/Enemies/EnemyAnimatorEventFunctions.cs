@@ -17,6 +17,8 @@ public class EnemyAnimatorEventFunctions : MonoBehaviour
     [SerializeField] GameObject eye;
     [SerializeField] float initialVelocity;
     [SerializeField] float dissolveTime = 1f;
+    [SerializeField] bool eventOnDissolve;
+    [ConditionalHide("eventOnDissolve", false, false)] [SerializeField] GameEvent dissolveEvent;
     // Private
 
     #endregion
@@ -62,6 +64,12 @@ public class EnemyAnimatorEventFunctions : MonoBehaviour
             LeanTween.value(0f, 1f, dissolveTime).setEaseInOutQuad().setOnUpdate((float value) =>
             {
                 mat.SetFloat("_Dissolve", value);
+            }).setOnComplete(()=>
+            {
+                if (eventOnDissolve)
+                {
+                    dissolveEvent.Raise();
+                }
             });
 
         });

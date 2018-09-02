@@ -15,10 +15,7 @@ public class BossController : Enemy
     [SerializeField] float flightHeight = 10f;
     [SerializeField] float smoothTime = 0.1f;
     [SerializeField] float dissolveTime = 5f;
-
-    [Header("References")]
-    [SerializeField] GameEvent winEvent;
-
+    
     // Private
     Vector3 currentVelocity;
     Vector3 targetPosition;
@@ -62,11 +59,6 @@ public class BossController : Enemy
         animator.SetTrigger("hit");
         Invoke("ActivateDelayed", activationDelay);
     }
-
-    public void Death()
-    {
-        winEvent.Raise();
-    }
     #endregion
 
 
@@ -83,7 +75,7 @@ public class BossController : Enemy
     {
         if (currentHP <= 0)
         {
-            //animator.SetBool("death", true);
+            animator.SetBool("death", true);
             //transform.Find("States").GetComponent<StateMachine>().ChangeState(deathState);
             score.IncreaseScore(enemyType.scoreOnDeath);
             Invoke("KillObj", animator.GetComponent<EnemyAnimatorEventFunctions>().DissolveTime);
