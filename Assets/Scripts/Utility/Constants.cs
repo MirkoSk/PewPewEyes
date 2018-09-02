@@ -30,11 +30,10 @@ public class Constants
     #endregion
 
     #region Scenes
-    public static readonly string SCENE_TITLE = "TitleScreen";
-    public static readonly string SCENE_MAIN_MENU = "MainMenu";
-    public static readonly string SCENE_INTRO = "Intro";
-    public static readonly string SCENE_CREDITS = "Credits";
-    public static readonly string SCENE_LEVEL01 = "Level01";
+    public static readonly string SCENE_LOGIC = "Main_Logic";
+    public static readonly string SCENE_ENVIRONMENT = "Main_Environment";
+    public static readonly string SCENE_GUI = "Main_GUI";
+    public static readonly string SCENE_MENU = "MainMenu";
     #endregion
 
     #region Sounds
