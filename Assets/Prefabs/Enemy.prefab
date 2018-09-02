@@ -1564,6 +1564,12 @@ MonoBehaviour:
   score: {fileID: 11400000, guid: a63d85d17dffcbd4fb6c551b402d6035, type: 2}
   animator: {fileID: 95232454041168606}
   deathState: {fileID: 1259197909619322}
+  shieldLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  aimingLinePrefab: {fileID: 1959629036657846, guid: f070e89a2daa5f14993c8e1b23f8af13,
+    type: 2}
+  stateMachine: {fileID: 114750429532557174}
   spawnManager: {fileID: 0}
 --- !u!114 &114943548701486152
 MonoBehaviour:
