@@ -67,6 +67,10 @@ public class Laser : MonoBehaviour
             trail.colorGradient = shotGoodGradient;
             isGood = true;
         }
+        else if (collision.collider.CompareTag(Constants.TAG_PLAYER) && !isGood)
+        {
+            collision.collider.GetComponent<Player>().DealDamage(type.damage);
+        }
         if (currentReflections > type.maxReflections)
         {
             Destroy(gameObject);

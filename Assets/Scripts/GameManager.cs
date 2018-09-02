@@ -12,8 +12,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     // Serialized Fields
+    [SerializeField] GameEvent pauseEvent;
 
     // Private
+    private bool gameIsPaused;
 
     // Public
     [HideInInspector] public GameObject Player;
@@ -51,23 +53,35 @@ public class GameManager : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag(Constants.TAG_PLAYER);
         ShieldController = GameObject.FindObjectOfType<ShieldController>();
 	}
-	#endregion
-	
-	
-	
-	#region Public Functions
-	
-	#endregion
-	
-	
-	
-	#region Private Functions
 
-	#endregion
-	
-	
-	
-	#region Coroutines
-	
-	#endregion
+    private void Update()
+    {
+        if (!gameIsPaused)
+        {
+            if (Input.GetButtonDown(Constants.INPUT_ESCAPE))
+                pauseEvent.Raise();
+        }
+    }
+    #endregion
+
+
+
+    #region Public Functions
+    public void PauseGame(bool state)
+    {
+        Time.timeScale = state == true ? 0 : 1;
+    }
+    #endregion
+
+
+
+    #region Private Functions
+
+    #endregion
+
+
+
+    #region Coroutines
+
+    #endregion
 }
