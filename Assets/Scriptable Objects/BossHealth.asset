@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: BossHealth
   m_EditorClassIdentifier: 
   value: 0
-  maxValue: 0
+  maxValue: 100
   respondeWithNullValueEvent: 0
   nullValueEvent: {fileID: 0}
   respondeWithFullValueEvent: 0

@@ -15,6 +15,7 @@ public class BossController : Enemy
     [SerializeField] float flightHeight = 10f;
     [SerializeField] float smoothTime = 0.1f;
     [SerializeField] float dissolveTime = 5f;
+    [SerializeField] IntValue bossHealthVisualization;
     
     // Private
     Vector3 currentVelocity;
@@ -34,7 +35,8 @@ public class BossController : Enemy
 	private void Start () 
 	{
         targetPosition = transform.position + Vector3.up * flightHeight;
-        currentHP = enemyType.hp;
+        bossHealthVisualization.value = enemyType.hp;
+        bossHealthVisualization.maxValue = enemyType.hp;
     }
 
     private void Update()
@@ -43,12 +45,33 @@ public class BossController : Enemy
         {
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref currentVelocity, smoothTime);
         }
+        /*else
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+                Activate();
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(10);
+        }*/
     }
     #endregion
 
 
 
     #region Public Functions
+    public new void TakeDamage(int amount)
+    {
+        bossHealthVisualization.value -= amount;
+        if (!CheckDeath())
+        {
+            if (playSoundOnHit)
+            {
+                hitSoundSource.Play();
+            }
+        }
+    }
+
     public void Hit()
     {
         animator.SetTrigger("hit");
@@ -71,16 +94,17 @@ public class BossController : Enemy
         stateMachine.ChangeState("Move");
     }
 
-    private void CheckDeath()
+    private bool CheckDeath()
     {
-        if (currentHP <= 0)
+        if (bossHealthVisualization.value <= 0)
         {
             animator.SetBool("death", true);
             //transform.Find("States").GetComponent<StateMachine>().ChangeState(deathState);
             score.IncreaseScore(enemyType.scoreOnDeath);
             Invoke("KillObj", animator.GetComponent<EnemyAnimatorEventFunctions>().DissolveTime);
+            return true;
         }
-
+        return false;
         //Material mat = GetComponent<Renderer>().material;
         //LeanTween.value(0f, 1f, dissolveTime).setEaseInOutQuad().setOnUpdate((float value) =>
         //{

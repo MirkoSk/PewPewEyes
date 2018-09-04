@@ -6,11 +6,12 @@ using Pixelplacement;
 /// <summary>
 /// 
 /// </summary>
-public class EnemyAnimatorEventFunctions : MonoBehaviour 
+public class EnemyAnimatorEventFunctions : MonoBehaviour
 {
 
     #region Variable Declarations
     // Serialized Fields
+    [SerializeField] Enemy enemy;
     [SerializeField] StateMachine stateMachine;
     [SerializeField] GameObject shootState;
     [SerializeField] List<Transform> shells;
@@ -36,18 +37,27 @@ public class EnemyAnimatorEventFunctions : MonoBehaviour
 	{
         
 	}
-	#endregion
-	
-	
-	
-	#region Public Functions
-	public void ShootLaser()
+
+    private void Update()
+    {
+       /* if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Animator>().SetBool("death", true);
+        }*/
+    }
+    #endregion
+
+
+
+    #region Public Functions
+    public void ShootLaser()
     {
         stateMachine.ChangeState(shootState);
     }
 
     public void Explode()
     {
+        enemy.deathSoundSource.Play();
         GetComponent<Animator>().enabled = false;
 
         eye.SetActive(false);
@@ -55,7 +65,7 @@ public class EnemyAnimatorEventFunctions : MonoBehaviour
         shells.ForEach((Transform t) =>
         {
             Rigidbody rb = t.gameObject.AddComponent<Rigidbody>();
-            t.gameObject.GetComponent<MeshCollider>().enabled = true;
+            t.gameObject.GetComponent<Collider>().enabled = true;
             rb.drag = 0f;
             rb.mass = 5f;
             rb.velocity = transform.position + t.position * initialVelocity;

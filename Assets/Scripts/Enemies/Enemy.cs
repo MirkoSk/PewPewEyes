@@ -9,7 +9,7 @@ using Pixelplacement;
 /// </summary>
 
 [RequireComponent(typeof(Rigidbody), typeof(NavMeshAgent))]
-public class Enemy : MonoBehaviour 
+public class Enemy : MonoBehaviour
 {
 
     #region Variable Declarations
@@ -27,8 +27,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected StateMachine stateMachine;
 
     [Header("Audio")]
-    [SerializeField] AudioSource deathSoundSource;
+    [SerializeField] public AudioSource deathSoundSource;
     public AudioSource shotSoundSource;
+    [SerializeField] protected bool playSoundOnHit;
+    [ConditionalHide("playSoundOnHit", true, false)] [SerializeField] protected AudioSource hitSoundSource;
     // Private
     protected int currentHP;
     protected LineRenderer aimingLine;
@@ -73,7 +75,13 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int amount)
     {
         currentHP -= amount;
-        CheckDeath();
+        if (!CheckDeath())
+        {
+            if (playSoundOnHit)
+            {
+                hitSoundSource.Play();
+            }
+        }
     }
 
     public void UpdateAimAssist(float lineLength, float lineDuration)
@@ -116,21 +124,23 @@ public class Enemy : MonoBehaviour
 
 
     #region Private Functions
-    private void CheckDeath()
+    private bool CheckDeath()
     {
         if (currentHP <= 0)
         {
             animator.SetBool("death", true);
-            agent.SetDestination(transform.position);
+            if(agent != null)
+                agent.SetDestination(transform.position);
             transform.Find("States").GetComponent<StateMachine>().ChangeState(deathState);
             score.IncreaseScore(enemyType.scoreOnDeath);
             Invoke("KillObj", animator.GetComponent<EnemyAnimatorEventFunctions>().DissolveTime);
+            return true;
         }
+        return false;
     }
 
     private void KillObj()
     {
-        deathSoundSource.Play();
         spawnManager.UnregisterEnemy(gameObject);
         Destroy(gameObject);
     }
