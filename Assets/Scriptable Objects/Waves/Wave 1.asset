@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5df633f9f84554fb18f5cd522faa7b, type: 3}
   m_Name: Wave 1
   m_EditorClassIdentifier: 
-  enemyAmount: 15
+  enemyAmount: 10
   tpye1Enemy: {fileID: 1842223594098196, guid: 4e102f5521aa0da46be73cdb56357433, type: 2}
   type1Ratio: 1
   type2Enemy: {fileID: 1187008508663116, guid: f7ab3206957561a418543aad7f89b69e, type: 2}
   type2Ratio: 0
   spawnTime: 30
-  type1Amount: 15
-  type2Amount: -15
+  type1Amount: 1
+  type2Amount: -1

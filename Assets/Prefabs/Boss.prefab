@@ -1842,7 +1842,7 @@ MonoBehaviour:
   - {fileID: 4238679388333302}
   - {fileID: 4141670814126708}
   eye: {fileID: 1056652608356002}
-  initialVelocity: 0
+  initialVelocity: 5
   dissolveTime: 5
   eventOnDissolve: 1
   dissolveEvent: {fileID: 11400000, guid: b8df35181ea64684ea9e3b69ac77da2e, type: 2}

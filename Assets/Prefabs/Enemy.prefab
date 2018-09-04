@@ -1760,6 +1760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c235c2716ca86034bbc25565110a208f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 114845889415567572}
   stateMachine: {fileID: 114750429532557174}
   shootState: {fileID: 1103543580198560}
   shells:
@@ -1774,8 +1775,10 @@ MonoBehaviour:
   - {fileID: 4146631170510180}
   - {fileID: 4555536923996052}
   eye: {fileID: 1272218930907128}
-  initialVelocity: 0
+  initialVelocity: 5
   dissolveTime: 5
+  eventOnDissolve: 0
+  dissolveEvent: {fileID: 0}
 --- !u!114 &114647043280074410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1860,6 +1863,8 @@ MonoBehaviour:
   stateMachine: {fileID: 114750429532557174}
   deathSoundSource: {fileID: 82699037809873812}
   shotSoundSource: {fileID: 82047450234294876}
+  playSoundOnHit: 0
+  hitSoundSource: {fileID: 0}
   spawnManager: {fileID: 0}
 --- !u!114 &114943548701486152
 MonoBehaviour:
